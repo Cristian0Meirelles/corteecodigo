@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/cortes",
+      "destination": "/"
+    },
+    {
+      "source": "/cortes.html",
+      "destination": "/"
+    },
+    {
+      "source": "/((?!assets/|favicon.ico).*)",
+      "destination": "/"
+    }
+  ]
+}

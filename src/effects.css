@@ -1,0 +1,2 @@
+/* Progressive enhancement: 3D only for precision pointers; no forced animations on mobile */
+@media (hover:hover) and (pointer:fine){.concept-card,.project-card{transition:transform .18s ease-out;transform-style:preserve-3d;will-change:transform}}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}

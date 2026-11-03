@@ -127,6 +127,28 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 
 .hero{background:var(--dark);color:#fff}.hero .brand b{color:#fff}.hero .brand small{color:var(--ondark2)}.hero .nav ul{color:#C3CDDB}.hero .nav ul a:hover{color:#fff}.hero .eyebrow{color:var(--barlink)}.hero h1 em{color:var(--acc)}.hero .lead{color:#C3CDDB}.hero .btn-wa{background:#fff;color:var(--dark)}.hero .chip{background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);color:#C3CDDB}.hero .chip b{color:#fff}.hero .chip svg{color:var(--acc)}
+
+/* ---------- fotos (Unsplash, ilustrativas) ---------- */
+.ph{position:relative;overflow:hidden;isolation:isolate;background:var(--phbg);border-radius:var(--phr)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+.ph img.is-err{visibility:hidden}
+.hero-ph{position:relative;width:min(100%,520px);margin-inline:auto}
+.hero-ph .ph{height:clamp(280px,84vw,360px);box-shadow:var(--phsh)}
+@media (min-width:960px){.hero-ph .ph{height:auto;aspect-ratio:5/6}}
+.sec-head{display:grid;gap:28px;align-items:end}
+.sec-head .ph{aspect-ratio:3/2;box-shadow:var(--phsh)}
+@media (min-width:900px){.sec-head{grid-template-columns:1.05fr .95fr;gap:56px}}
+.about{display:grid;gap:34px}
+.about .ph{aspect-ratio:4/3;box-shadow:var(--phsh)}
+@media (min-width:960px){.about{grid-template-columns:.82fr 1.18fr;gap:56px;align-items:stretch}.about .ph{aspect-ratio:auto;height:100%;min-height:520px}.about .facts{grid-template-columns:repeat(2,1fr)}}
+:root{--phbg:radial-gradient(90% 70% at 70% 20%,rgba(255,122,89,.35),transparent 60%),linear-gradient(160deg,#22344F 0%,#0F1B2D 100%);--phr:20px;--phsh:0 40px 70px -46px rgba(15,27,45,.6)}
+.hero-ph .ph{border-radius:28px;box-shadow:0 40px 80px -40px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.08)}
+.hero-ph .ph::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 55%,rgba(15,27,45,.75))}
+.hero-ph::before,.hero-ph::after{content:"";position:absolute;width:70px;height:70px;z-index:2;pointer-events:none}
+.hero-ph::before{left:-12px;top:-12px;border-top:3px solid #FF7A59;border-left:3px solid #FF7A59;border-top-left-radius:22px}
+.hero-ph::after{right:-12px;bottom:-12px;border-bottom:3px solid #FF7A59;border-right:3px solid #FF7A59;border-bottom-right-radius:22px}
+.hero-ph .tagx{position:absolute;left:22px;bottom:20px;z-index:2;font-size:12px;letter-spacing:.24em;color:#D6DEEA;font-weight:600}
+.sec-head .ph::after,.about .ph::after{content:"";position:absolute;left:0;bottom:0;width:90px;height:4px;background:#FF7A59;z-index:1}
 </style>
 </head>
 <body>
@@ -150,12 +172,7 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
         <div class="cta rise d3" id="hero-cta"><a class="btn btn-pri" href="https://www.doctoralia.com.br/perfil/brunna-nogueira" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h3"/></svg>Agendar online</a><a class="btn btn-wa" href="https://wa.me/5521972807070?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Brunna%20Nogueira." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#wa"/></svg>Falar no WhatsApp</a></div>
         <div class="proof rise d4"><span class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.26 6.85.7-5.13 4.6 1.46 6.74L12 16.9l-6.08 3.4 1.46-6.74L2.25 8.96l6.85-.7Z"/></svg><span><b>312 opiniões</b> no Doctoralia</span></span><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><span>Agenda online</span></span></div>
       </div>
-      <div class="art rise d2" aria-hidden="true"><svg viewBox="0 0 480 480" fill="none"><rect x="20" y="20" width="440" height="440" rx="36" fill="#0F1B2D"/>
-<g stroke="#fff" stroke-opacity=".06"><path d="M20 100h440M20 180h440M20 260h440M20 340h440M100 20v440M180 20v440M260 20v440M340 20v440"/></g>
-<path d="M120 150c0 130 50 220 120 220s120-90 120-220" stroke="#FF7A59" stroke-width="8" stroke-linecap="round" stroke-dasharray="620" stroke-dashoffset="620"><animate attributeName="stroke-dashoffset" from="620" to="0" dur="1.8s" begin=".3s" fill="freeze"/></path>
-<path d="M150 150c0 105 40 180 90 180s90-75 90-180" stroke="#7FB3FF" stroke-opacity=".5" stroke-width="2" stroke-dasharray="4 8"/>
-<g stroke="#fff" stroke-opacity=".7" stroke-width="2"><circle cx="240" cy="240" r="44"/><path d="M240 180v24M240 276v24M180 240h24M276 240h24"/></g><circle cx="240" cy="240" r="6" fill="#FF7A59"><animate attributeName="r" values="6;10;6" dur="2.4s" repeatCount="indefinite"/></circle>
-<text x="48" y="430" fill="#97A6BC" font-family="Archivo, sans-serif" font-size="13" letter-spacing="3">CTBMF · ODONTOLOGIA</text></svg></div>
+      <div class="hero-ph rise d2"><figure class="ph"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" srcset="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&amp;fit=crop&amp;w=900&amp;q=80 900w, https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w" sizes="(min-width:960px) 520px, 100vw" width="1600" height="1067" alt="Profissional de odontologia de camisa branca em consultório" fetchpriority="high" onerror="this.classList.add('is-err')"></figure><span class="tagx" aria-hidden="true">CTBMF · ODONTOLOGIA</span></div>
     </div>
   </div>
 </div>
@@ -163,9 +180,9 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 <main>
 <section id="servicos">
   <div class="wrap">
-    <span class="kicker">Consultas</span>
+    <div class="sec-head"><div><span class="kicker">Consultas</span>
     <h2>Consultas com <em>valor claro</em>.</h2>
-    <p class="sec-lead">Serviços e valores informados no perfil público da Dra. Brunna Nogueira. Exames e procedimentos são definidos em consulta.</p>
+    <p class="sec-lead">Serviços e valores informados no perfil público da Dra. Brunna Nogueira. Exames e procedimentos são definidos em consulta.</p></div><figure class="ph"><img src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900" height="1125" alt="Modelo didático de implante dentário" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"></figure></div>
     <div class="svc" style="--svccols:4"><div class="s"><span class="n">01</span><h3>Cirurgia e traumatologia buco-maxilo-facial</h3><p>Consulta com a especialista: R$ 350.</p></div><div class="s"><span class="n">02</span><h3>Consulta com dentista</h3><p>Consulta odontológica: R$ 350.</p></div><div class="s"><span class="n">03</span><h3>Presencial</h3><p>A dentista não atende por teleconsulta; as consultas são nos consultórios.</p></div><div class="s"><span class="n">04</span><h3>Conteúdo em vídeo</h3><p>Canal no YouTube e perfis no Instagram e no Facebook (@dra.brunnanogueira).</p></div></div>
     <p class="src">Fonte: “Serviços e preços” e links do perfil da Dra. Brunna Nogueira no Doctoralia, consultado em 03/11/2026. Valores sujeitos a alteração.</p>
   </div>
@@ -173,10 +190,12 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 
 <section id="sobre">
   <div class="wrap">
+    <div class="about"><figure class="ph"><img src="https://images.unsplash.com/photo-1777445826358-f95518f49b44?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900" height="1125" alt="Dentista mostrando a um paciente um modelo de implante dentário" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"></figure><div>
     <span class="kicker">Sobre</span>
     <h2>Reconhecida por <em>quem já operou</em> com ela.</h2>
     <p class="sec-lead">Informações públicas do perfil profissional da Dra. Brunna Nogueira.</p>
     <div class="facts"><div class="f"><div class="big">312</div><h3>opiniões no Doctoralia</h3><p>Avaliações deixadas por pacientes.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div><div class="f"><div class="big">3</div><h3>cidades e bairros</h3><p>Freguesia (Jacarepaguá), Ipanema e Icaraí, em Niterói.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div><div class="f"><div class="big">R$ 350</div><h3>consulta</h3><p>Valor da consulta informado no perfil.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div><div class="f"><div class="big">24h</div><h3>agenda online</h3><p>Calendário de horários livres no Doctoralia.</p><p class="src">Fonte: agenda on-line do perfil no Doctoralia.</p></div></div>
+    </div></div>
   </div>
 </section>
 
@@ -210,7 +229,7 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
     </div>
     <div class="legal">
       <span>Prévia · Corte &amp; Código · <a href="https://corteecodigo.vercel.app" target="_blank" rel="noopener">corteecodigo.vercel.app</a></span>
-      <span>Página de demonstração, não é o site oficial de Dra. Brunna Nogueira.</span>
+      <span>Página de demonstração, não é o site oficial de Dra. Brunna Nogueira. Imagens ilustrativas: Unsplash.</span>
     </div>
   </div>
 </footer>

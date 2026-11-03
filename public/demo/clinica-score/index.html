@@ -198,6 +198,31 @@ footer a:hover{color:#fff}
 .band .cta2{display:flex;flex-wrap:wrap;gap:12px}
 @media (min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
 a:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+
+/* ---------- fotos (Unsplash, ilustrativas) ---------- */
+img{display:block}
+.ph{position:relative;overflow:hidden;isolation:isolate;margin:0;background:radial-gradient(90% 70% at 80% 10%,rgba(196,242,90,.28),transparent 60%),radial-gradient(80% 70% at 10% 90%,rgba(59,214,181,.3),transparent 60%),linear-gradient(160deg,#17304A,#0A1622)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+.ph img.is-err{visibility:hidden}
+.hero-media{position:relative;width:min(100%,500px);margin-inline:auto}
+.hero-media .ph{height:clamp(300px,86vw,360px);border-radius:24px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),0 50px 90px -50px rgba(0,0,0,.8)}
+.hero-media .ph::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,22,34,0) 50%,rgba(10,22,34,.55));pointer-events:none}
+@media (min-width:960px){.hero-media .ph{height:auto;aspect-ratio:1}}
+.hero-media::before{content:"";position:absolute;right:-18px;top:-18px;width:120px;height:120px;border-radius:24px;border:1.5px solid rgba(196,242,90,.45);z-index:0}
+.mini-dial{position:absolute;left:14px;bottom:14px;z-index:2;display:flex;align-items:center;gap:12px;padding:10px 16px 10px 10px;border-radius:18px;background:rgba(10,22,34,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),0 20px 40px -20px rgba(0,0,0,.7)}
+@media (min-width:960px){.mini-dial{left:-28px;bottom:28px}}
+.mini-dial .d{position:relative;width:84px;height:84px;flex-shrink:0}
+.mini-dial .d svg{width:100%;height:100%}
+.mini-dial .d b{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--disp);font-size:30px;font-weight:600;letter-spacing:-.04em}
+.mini-dial span{font-family:var(--disp);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:#B9C7D2;line-height:1.35}
+.hero-media .legend{margin-top:24px}
+.feature-l{display:flex;flex-direction:column}
+.feature-ph{flex:1;min-height:220px;margin:26px -32px -32px;border-radius:0}
+.tele{margin-top:44px;height:clamp(230px,52vw,380px);border-radius:22px;box-shadow:inset 0 0 0 1px var(--line-d)}
+.tele::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(10,22,34,.85) 0%,rgba(10,22,34,.35) 45%,rgba(10,22,34,0) 75%)}
+.tele figcaption{position:absolute;left:24px;bottom:22px;z-index:2;display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:600;font-size:15px;color:#fff;padding:10px 14px;border-radius:12px;background:rgba(255,255,255,.08);backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.tele figcaption svg{width:20px;height:20px;color:var(--lime)}
+.tele + .fgrid{margin-top:14px}
 </style>
 </head>
 <body>
@@ -239,12 +264,12 @@ a:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
         </div>
       </div>
 
-      <div class="rise d2">
-        <div class="dial" aria-hidden="true">
-          <svg viewBox="0 0 400 400" fill="none">
-            <circle cx="200" cy="200" r="186" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
-            <circle cx="200" cy="200" r="150" stroke="rgba(255,255,255,.07)" stroke-width="22"/>
-            <g stroke-width="22" stroke-linecap="round" transform="rotate(-90 200 200)">
+      <div class="hero-media rise d2">
+        <div style="position:relative">
+          <figure class="ph"><img src="https://images.unsplash.com/photo-1666214277730-e9c7e755e5a3?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" srcset="https://images.unsplash.com/photo-1666214277730-e9c7e755e5a3?auto=format&amp;fit=crop&amp;w=900&amp;q=80 900w, https://images.unsplash.com/photo-1666214277730-e9c7e755e5a3?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w" sizes="(min-width:960px) 500px, 100vw" width="1600" height="1067" alt="Médico conversando com um paciente durante a consulta" fetchpriority="high" onerror="this.classList.add('is-err')"></figure>
+          <div class="mini-dial" aria-hidden="true">
+            <div class="d"><svg viewBox="0 0 400 400" fill="none"><circle cx="200" cy="200" r="150" stroke="rgba(255,255,255,.08)" stroke-width="24"/>
+            <g stroke-width="24" stroke-linecap="round" transform="rotate(-90 200 200)">
               <!-- circunferência ~942; 7 segmentos de ~134,6 com folga -->
               <circle class="arc" style="--len:118" cx="200" cy="200" r="150" stroke="#C4F25A" stroke-dashoffset="0"/>
               <circle class="arc" style="--len:118;animation-delay:0.1s" cx="200" cy="200" r="150" stroke="#3BD6B5" stroke-dashoffset="-135"/>
@@ -253,10 +278,9 @@ a:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
               <circle class="arc" style="--len:118;animation-delay:0.4s" cx="200" cy="200" r="150" stroke="#FF9F80" stroke-dashoffset="-538"/>
               <circle class="arc" style="--len:118;animation-delay:0.5s" cx="200" cy="200" r="150" stroke="#F5D76E" stroke-dashoffset="-673"/>
               <circle class="arc" style="--len:118;animation-delay:0.6s" cx="200" cy="200" r="150" stroke="#FF7EB6" stroke-dashoffset="-808"/>
-            </g>
-            <circle cx="200" cy="200" r="112" stroke="rgba(255,255,255,.08)" stroke-dasharray="2 8"/>
-          </svg>
-          <div class="center"><div><b>7</b><span>áreas<br>num só lugar</span></div></div>
+            </g></svg><b>7</b></div>
+            <span>áreas<br>num só lugar</span>
+          </div>
         </div>
         <ul class="legend">
           <li><i style="background:#C4F25A"></i>Endocrinologia</li>
@@ -284,6 +308,7 @@ a:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
         <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-2 3-5 5.5-5 9a5 5 0 0 0 10 0c0-3.5-3-6-5-9Z"/><path d="M10 14a2 2 0 0 0 2 2"/></svg></div>
         <h3>Endocrinologia e metabologia</h3>
         <p>Consultas e acompanhamento com endocrinologista, também em conjunto com a nutrição.</p>
+        <figure class="ph feature-ph"><img src="https://images.unsplash.com/photo-1758691461990-03b49d969495?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900" height="600" alt="Médico fazendo anotações no prontuário durante o atendimento" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"></figure>
       </div>
       <div class="feature-r">
         <h4>Atendimentos listados</h4>
@@ -332,6 +357,7 @@ a:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
   <div class="wrap">
     <span class="label">02 <b>/ Diferenciais</b></span>
     <h2>Avaliada por quem já foi atendido.</h2>
+    <figure class="ph tele"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" width="1600" height="900" alt="Laptop aberto ao lado de um estetoscópio, representando a teleconsulta" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"><figcaption><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="13" height="12" rx="2.5"/><path d="m16 10 5-3v10l-5-3"/></svg>Teleconsulta disponível</figcaption></figure>
     <div class="fgrid">
       <div class="f">
         <div class="big">5<small>/5</small></div>
@@ -416,7 +442,7 @@ a:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
     </div>
     <div class="legal">
       <span>Prévia · Corte &amp; Código · <a href="https://corteecodigo.vercel.app" target="_blank" rel="noopener">corteecodigo.vercel.app</a></span>
-      <span>Página de demonstração, não é o site oficial da Clínica Score.</span>
+      <span>Página de demonstração, não é o site oficial da Clínica Score. Imagens ilustrativas: Unsplash.</span>
     </div>
   </div>
 </footer>

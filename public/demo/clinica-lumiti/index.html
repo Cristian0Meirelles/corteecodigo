@@ -200,6 +200,29 @@ footer a:hover{color:#fff}
 .pro-cta .btn-wa{background:#fff;color:var(--ink)}
 .pro-cta .src{color:#86A3A0;margin:0}
 a:focus-visible,.btn:focus-visible{outline:3px solid var(--sun2);outline-offset:3px}
+
+/* ---------- fotos (Unsplash, ilustrativas) ---------- */
+.ph{position:relative;overflow:hidden;isolation:isolate;margin:0;background:radial-gradient(120% 80% at 70% 15%,#FFE2B8 0%,#F8B7A0 55%,#EE8A90 100%)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+.ph img.is-err{visibility:hidden}
+.hero-split{display:grid;gap:44px;align-items:center}
+@media (min-width:900px){.hero-split{grid-template-columns:1.08fr .92fr;gap:48px}.hero-split h1{font-size:clamp(60px,6.6vw,96px)}}
+.hero-ph{position:relative;width:min(100%,480px);margin-inline:auto}
+.hero-ph::before{content:"";position:absolute;inset:-14px;border-radius:999px 999px 36px 36px;border:1px solid rgba(14,52,51,.14);pointer-events:none}
+.hero-ph .ph{height:clamp(300px,88vw,360px);border-radius:999px 999px 28px 28px;box-shadow:0 50px 80px -50px rgba(14,52,51,.55),0 0 0 6px rgba(255,255,255,.55)}
+@media (min-width:900px){.hero-ph .ph{height:auto;aspect-ratio:4/5}}
+.hero-ph .badge{position:absolute;left:-6px;bottom:28px;z-index:2;display:flex;align-items:center;gap:10px;padding:10px 16px 10px 10px;border-radius:999px;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);font-size:13.5px;font-weight:600;box-shadow:0 18px 40px -22px rgba(14,52,51,.55)}
+.hero-ph .badge i{width:30px;height:30px;border-radius:50%;background:linear-gradient(140deg,var(--sun1),var(--sun3))}
+@media (min-width:900px){.hero-ph .badge{left:-34px}}
+.duo{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;margin-top:40px}
+@media (min-width:900px){.duo{grid-template-columns:1.55fr 1fr;gap:18px}}
+.duo .ph{height:clamp(190px,46vw,340px);border-radius:var(--r)}
+.duo figcaption{position:absolute;left:12px;bottom:12px;z-index:1;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);color:var(--ink)}
+.duo + .groups{margin-top:18px}
+.pro-top{display:grid;gap:34px;position:relative;z-index:1}
+@media (min-width:900px){.pro-top{grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}}
+.pro-top .ph{aspect-ratio:4/3;border-radius:180px 180px var(--r) var(--r);box-shadow:0 0 0 1px rgba(255,255,255,.12),0 40px 80px -40px rgba(0,0,0,.6);background:radial-gradient(80% 60% at 70% 15%,rgba(255,201,121,.4),transparent 62%),radial-gradient(70% 60% at 15% 95%,rgba(233,112,122,.3),transparent 60%),linear-gradient(160deg,#1C4A47,#0E3433)}
+@media (min-width:900px){.pro-top .ph{aspect-ratio:1}}
 </style>
 </head>
 <body>
@@ -237,7 +260,8 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--sun2);outline-offset:
 </header>
 
 <section class="hero" style="padding-top:18px">
-  <div class="wrap">
+  <div class="wrap hero-split">
+   <div>
     <span class="eyebrow rise"><i></i>Clínica multiespecialidades<span class="hide-sm">&nbsp;· Barra da Tijuca</span></span>
     <h1 class="rise d1">Cuidado completo, <em>em um só</em> endereço.</h1>
     <p class="lead rise d2">Medicina e odontologia lado a lado no Shopping Open Mall Américas: de clínico geral e cardiologia a otorrinolaringologia, ortopedia e harmonização orofacial.</p>
@@ -255,6 +279,11 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--sun2);outline-offset:
         <p><strong>Teleconsulta</strong>atendimento on-line disponível</p>
       </div>
     </div>
+   </div>
+   <div class="hero-ph rise d2">
+     <figure class="ph"><img src="https://images.unsplash.com/photo-1787496994323-59ac5cff09f9?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" srcset="https://images.unsplash.com/photo-1787496994323-59ac5cff09f9?auto=format&amp;fit=crop&amp;w=900&amp;q=80 900w, https://images.unsplash.com/photo-1787496994323-59ac5cff09f9?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w" sizes="(min-width:900px) 480px, 100vw" width="1600" height="2000" alt="Sala de espera aconchegante com poltronas creme e planta, em tons quentes" fetchpriority="high" onerror="this.classList.add('is-err')"></figure>
+     <span class="badge" aria-hidden="true"><i></i>Medicina e odontologia</span>
+   </div>
   </div>
 </section>
 
@@ -265,6 +294,11 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--sun2);outline-offset:
     <span class="kicker">Especialidades</span>
     <h2>Especialistas que <em>conversam</em> entre si.</h2>
     <p class="sec-lead">Consultas médicas, cirurgia e odontologia no mesmo endereço, para resolver mais coisas numa mesma ida à clínica.</p>
+
+    <div class="duo">
+      <figure class="ph"><img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" width="1600" height="1067" alt="Médico sorridente conversando com um paciente durante a consulta" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"><figcaption>Medicina</figcaption></figure>
+      <figure class="ph"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900" height="600" alt="Consultório odontológico moderno e iluminado" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"><figcaption>Odontologia</figcaption></figure>
+    </div>
 
     <div class="groups">
       <div class="group">
@@ -389,9 +423,14 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--sun2);outline-offset:
 
 <section id="profissionais">
   <div class="wrap">
+    <div class="pro-top">
+    <div>
     <span class="kicker">Para profissionais de saúde</span>
     <h2>Alugue seu consultório <em>na Barra</em>.</h2>
     <p class="sec-lead">Além de atender pacientes, a Lumiti oferece consultórios para locação num espaço multidisciplinar, com a proposta de cuidar da operação para que o profissional se concentre nos pacientes.</p>
+    </div>
+    <figure class="ph"><img src="https://images.unsplash.com/photo-1787496994867-939269b4d323?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900" height="900" alt="Corredor de clínica com quadros de arte botânica nas paredes" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"></figure>
+    </div>
     <div class="pro">
       <div><h3>Consultórios para locação</h3><p>Salas para profissionais de saúde dentro da clínica, na Av. das Américas.</p></div>
       <div><h3>Espaço multidisciplinar</h3><p>Medicina e odontologia no mesmo endereço, ao lado de outras especialidades.</p></div>
@@ -417,7 +456,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--sun2);outline-offset:
     </div>
     <div class="legal">
       <span>Prévia · Corte &amp; Código · <a href="https://corteecodigo.vercel.app" target="_blank" rel="noopener">corteecodigo.vercel.app</a></span>
-      <span>Página de demonstração, não é o site oficial da Clínica Lumiti Saúde.</span>
+      <span>Página de demonstração, não é o site oficial da Clínica Lumiti Saúde. Imagens ilustrativas: Unsplash.</span>
     </div>
   </div>
 </footer>

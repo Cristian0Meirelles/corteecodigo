@@ -127,6 +127,28 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 
 
+
+/* ---------- fotos (Unsplash, ilustrativas) ---------- */
+.ph{position:relative;overflow:hidden;isolation:isolate;background:var(--phbg);border-radius:var(--phr)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+.ph img.is-err{visibility:hidden}
+.hero-ph{position:relative;width:min(100%,520px);margin-inline:auto}
+.hero-ph .ph{height:clamp(280px,84vw,360px);box-shadow:var(--phsh)}
+@media (min-width:960px){.hero-ph .ph{height:auto;aspect-ratio:5/6}}
+.sec-head{display:grid;gap:28px;align-items:end}
+.sec-head .ph{aspect-ratio:3/2;box-shadow:var(--phsh)}
+@media (min-width:900px){.sec-head{grid-template-columns:1.05fr .95fr;gap:56px}}
+.about{display:grid;gap:34px}
+.about .ph{aspect-ratio:4/3;box-shadow:var(--phsh)}
+@media (min-width:960px){.about{grid-template-columns:.82fr 1.18fr;gap:56px;align-items:stretch}.about .ph{aspect-ratio:auto;height:100%;min-height:520px}.about .facts{grid-template-columns:repeat(2,1fr)}}
+:root{--phbg:radial-gradient(circle at 35% 30%,#FFE3A8 0%,#FDBE4E 55%,#FCA311 100%);--phr:26px;--phsh:none}
+.hero-ph{width:min(100%,540px);aspect-ratio:1}
+.hero-ph>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.hero-ph .ph{position:absolute;left:10%;top:12%;width:80%;height:auto;aspect-ratio:1;border-radius:50%;box-shadow:0 0 0 10px #FCA311,0 30px 60px -30px rgba(20,33,61,.55)}
+@media (min-width:960px){.hero-ph .ph{aspect-ratio:1}}
+.hero-ph .orbit{z-index:2;pointer-events:none}
+.sec-head .ph{box-shadow:12px 12px 0 #FCA311}
+.about .ph{border-radius:26px 26px 26px 140px;box-shadow:-12px 12px 0 #4EA8DE}
 </style>
 </head>
 <body>
@@ -150,9 +172,7 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
         <div class="cta rise d3" id="hero-cta"><a class="btn btn-pri" href="https://wa.me/5521992812265?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Andreia%20Cordeiro%20Cruz." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#wa"/></svg>Agendar pelo WhatsApp</a><a class="btn btn-ghost" href="#servicos">Ver tratamentos</a></div>
         <div class="proof rise d4"><span class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.26 6.85.7-5.13 4.6 1.46 6.74L12 16.9l-6.08 3.4 1.46-6.74L2.25 8.96l6.85-.7Z"/></svg><span><b>234 opiniões</b> no Doctoralia</span></span><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6Z"/><path d="m9 12 2 2 4-4"/></svg><span>CRO-RJ 23405</span></span></div>
       </div>
-      <div class="art rise d2" aria-hidden="true"><svg viewBox="0 0 480 480" fill="none"><circle cx="240" cy="250" r="200" fill="#FFF1D6"/><circle cx="240" cy="250" r="150" fill="#FCA311"/>
-<path d="M170 270c25 50 115 50 140 0" stroke="#14213D" stroke-width="14" stroke-linecap="round"/><circle cx="195" cy="215" r="13" fill="#14213D"/><circle cx="285" cy="215" r="13" fill="#14213D"/>
-<g><animateTransform attributeName="transform" type="rotate" from="0 240 250" to="360 240 250" dur="40s" repeatCount="indefinite"/><path d="M240 30l9 20 22 3-16 15 4 22-19-11-19 11 4-22-16-15 22-3Z" fill="#4EA8DE"/><circle cx="440" cy="250" r="14" fill="#14213D"/><rect x="40" y="236" width="28" height="28" rx="8" fill="#4EA8DE" transform="rotate(20 54 250)"/><circle cx="240" cy="452" r="10" fill="#C77700"/></g></svg></div>
+      <div class="hero-ph rise d2"><svg viewBox="0 0 480 480" fill="none" aria-hidden="true"><circle cx="240" cy="250" r="214" fill="#FFF1D6"/></svg><figure class="ph"><img src="https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" srcset="https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?auto=format&amp;fit=crop&amp;w=900&amp;q=80 900w, https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w" sizes="(min-width:960px) 520px, 100vw" width="1600" height="1067" alt="Sorriso aberto e alegre em close" fetchpriority="high" onerror="this.classList.add('is-err')"></figure><svg class="orbit" viewBox="0 0 480 480" fill="none" aria-hidden="true"><g><animateTransform attributeName="transform" type="rotate" from="0 240 250" to="360 240 250" dur="40s" repeatCount="indefinite"/><path d="M240 18l9 20 22 3-16 15 4 22-19-11-19 11 4-22-16-15 22-3Z" fill="#4EA8DE"/><circle cx="452" cy="250" r="14" fill="#14213D"/><rect x="18" y="236" width="28" height="28" rx="8" fill="#4EA8DE" transform="rotate(20 32 250)"/><circle cx="240" cy="466" r="10" fill="#C77700"/></g></svg></div>
     </div>
   </div>
 </div>
@@ -160,9 +180,9 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 <main>
 <section id="servicos">
   <div class="wrap">
-    <span class="kicker">Tratamentos</span>
+    <div class="sec-head"><div><span class="kicker">Tratamentos</span>
     <h2>Do primeiro dentinho <em>ao aparelho</em>.</h2>
-    <p class="sec-lead">Áreas de atuação e serviços que aparecem no perfil público da dentista. O tratamento é definido em consulta.</p>
+    <p class="sec-lead">Áreas de atuação e serviços que aparecem no perfil público da dentista. O tratamento é definido em consulta.</p></div><figure class="ph"><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900" height="1125" alt="Dentista examinando os dentes de um paciente" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"></figure></div>
     <div class="svc" style="--svccols:4"><div class="s"><span class="n">01</span><h3>Avaliação ortodôntica</h3><p>Primeira consulta para crianças, adolescentes e adultos.</p></div><div class="s"><span class="n">02</span><h3>Aparelho fixo, estético e autoligado</h3><p>Opções de aparelho fixo listadas no perfil.</p></div><div class="s"><span class="n">03</span><h3>Aparelho funcional</h3><p>Ortopedia funcional dos maxilares.</p></div><div class="s"><span class="n">04</span><h3>Odontopediatria</h3><p>Atendimento odontológico para crianças.</p></div><div class="s"><span class="n">05</span><h3>Aparelhos móveis</h3><p>Colocação, manutenção e remoção de aparelhos móveis e fixos.</p></div><div class="s"><span class="n">06</span><h3>Clareamento dental</h3><p>Inclui clareamento caseiro.</p></div><div class="s"><span class="n">07</span><h3>Laserterapia</h3><p>Entre as áreas de experiência da dentista.</p></div><div class="s"><span class="n">08</span><h3>Atendimento particular</h3><p>A dentista atende pacientes particulares.</p></div></div>
     <p class="src">Fonte: serviços e áreas de experiência do perfil da Dra. Andreia Cordeiro Cruz no Doctoralia, consultado em 03/11/2026.</p>
   </div>
@@ -170,10 +190,12 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 
 <section id="sobre">
   <div class="wrap">
+    <div class="about"><figure class="ph"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900" height="1125" alt="Cadeira odontológica laranja em consultório iluminado" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"></figure><div>
     <span class="kicker">Sobre</span>
     <h2>Cuidado para <em>a família toda</em>.</h2>
     <p class="sec-lead">Informações públicas do perfil profissional da Dra. Andreia Cordeiro Cruz.</p>
     <div class="facts"><div class="f"><div class="big">234</div><h3>opiniões no Doctoralia</h3><p>Avaliações deixadas por pacientes e famílias.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div><div class="f"><div class="big">4</div><h3>áreas de atuação</h3><p>Ortodontia, odontopediatria, ortopedia funcional dos maxilares e laserterapia.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div><div class="f"><div class="big">2</div><h3>consultórios</h3><p>Freguesia (Jacarepaguá) e Copacabana.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div><div class="f"><div class="big">CRO</div><h3>RJ 23405</h3><p>Registro profissional informado no perfil.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div></div>
+    </div></div>
   </div>
 </section>
 
@@ -207,7 +229,7 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
     </div>
     <div class="legal">
       <span>Prévia · Corte &amp; Código · <a href="https://corteecodigo.vercel.app" target="_blank" rel="noopener">corteecodigo.vercel.app</a></span>
-      <span>Página de demonstração, não é o site oficial de Dra. Andreia Cordeiro Cruz.</span>
+      <span>Página de demonstração, não é o site oficial de Dra. Andreia Cordeiro Cruz. Imagens ilustrativas: Unsplash.</span>
     </div>
   </div>
 </footer>

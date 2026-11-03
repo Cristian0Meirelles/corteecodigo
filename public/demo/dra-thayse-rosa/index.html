@@ -127,6 +127,27 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 
 .hero-grid>div:first-child{text-align:left}@media (min-width:960px){h1{max-width:12ch}}.chip{border-radius:4px}
+
+/* ---------- fotos (Unsplash, ilustrativas) ---------- */
+.ph{position:relative;overflow:hidden;isolation:isolate;background:var(--phbg);border-radius:var(--phr)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+.ph img.is-err{visibility:hidden}
+.hero-ph{position:relative;width:min(100%,520px);margin-inline:auto}
+.hero-ph .ph{height:clamp(280px,84vw,360px);box-shadow:var(--phsh)}
+@media (min-width:960px){.hero-ph .ph{height:auto;aspect-ratio:5/6}}
+.sec-head{display:grid;gap:28px;align-items:end}
+.sec-head .ph{aspect-ratio:3/2;box-shadow:var(--phsh)}
+@media (min-width:900px){.sec-head{grid-template-columns:1.05fr .95fr;gap:56px}}
+.about{display:grid;gap:34px}
+.about .ph{aspect-ratio:4/3;box-shadow:var(--phsh)}
+@media (min-width:960px){.about{grid-template-columns:.82fr 1.18fr;gap:56px;align-items:stretch}.about .ph{aspect-ratio:auto;height:100%;min-height:520px}.about .facts{grid-template-columns:repeat(2,1fr)}}
+:root{--phbg:linear-gradient(165deg,#ECE6D8 0%,#D8D0BC 55%,#A9B9A6 100%);--phr:6px;--phsh:0 40px 70px -48px rgba(30,43,36,.6)}
+.hero-ph{width:min(100%,440px)}
+.hero-ph .ph{border-radius:999px 999px 6px 6px}
+.hero-ph::before{content:"";position:absolute;inset:-14px -14px 22px 22px;z-index:-1;border:1px solid rgba(94,125,99,.45);border-radius:999px 999px 6px 6px}
+.hero-ph::after{content:"";position:absolute;right:-6px;top:16%;width:58px;height:58px;border-radius:50%;background:#D9B97C;opacity:.9;box-shadow:0 14px 30px -12px rgba(30,43,36,.45);animation:floaty 7s ease-in-out infinite}
+@keyframes floaty{50%{transform:translateY(-10px)}}
+@media (min-width:960px){.about .ph{border-radius:999px 999px 6px 6px}}
 </style>
 </head>
 <body>
@@ -150,10 +171,7 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
         <div class="cta rise d3" id="hero-cta"><a class="btn btn-pri" href="https://www.doctoralia.com.br/clinicas/clinica-dermatologica-dra-thayse-rosa" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h3"/></svg>Agendar online</a><a class="btn btn-wa" href="https://wa.me/5521968562530?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Dermatol%C3%B3gica%20Dra.%20Thayse%20Rosa." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#wa"/></svg>Falar no WhatsApp</a></div>
         <div class="proof rise d4"><span class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.26 6.85.7-5.13 4.6 1.46 6.74L12 16.9l-6.08 3.4 1.46-6.74L2.25 8.96l6.85-.7Z"/></svg><span><b>5/5</b> · 78 opiniões no Doctoralia</span></span><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6Z"/><path d="m9 12 2 2 4-4"/></svg><span>Aceita Care Plus</span></span></div>
       </div>
-      <div class="art rise d2" aria-hidden="true"><svg viewBox="0 0 480 480" fill="none"><path d="M240 30a190 190 0 0 1 190 190v230H50V220A190 190 0 0 1 240 30Z" fill="#ECE6D8"/><path d="M240 62a158 158 0 0 1 158 158v198H82V220A158 158 0 0 1 240 62Z" stroke="#5E7D63" stroke-opacity=".45"/>
-<g stroke="#5E7D63" stroke-width="1.6" stroke-linecap="round"><path d="M240 410V170"/><path d="M240 330c-50-10-80-50-86-100 46 8 78 44 86 100Z" fill="#5E7D63" fill-opacity=".85"/><path d="M240 280c48-12 76-50 80-96-44 10-74 44-80 96Z" fill="#5E7D63" fill-opacity=".6"/><path d="M240 220c-30-10-46-40-46-72 28 8 44 36 46 72Z" fill="#5E7D63" fill-opacity=".4"/></g>
-<circle cx="330" cy="130" r="26" fill="#D9B97C" opacity=".85"><animate attributeName="cy" values="130;120;130" dur="7s" repeatCount="indefinite"/></circle>
-<path d="M50 450h380" stroke="#1E2B24" stroke-opacity=".25"/></svg></div>
+      <div class="hero-ph rise d2"><figure class="ph"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" srcset="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&amp;fit=crop&amp;w=900&amp;q=80 900w, https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w" sizes="(min-width:960px) 520px, 100vw" width="1600" height="1067" alt="Mulher relaxando com máscara facial durante um tratamento estético" fetchpriority="high" onerror="this.classList.add('is-err')"></figure></div>
     </div>
   </div>
 </div>
@@ -161,9 +179,9 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 <main>
 <section id="servicos">
   <div class="wrap">
-    <span class="kicker">Atendimentos</span>
+    <div class="sec-head"><div><span class="kicker">Atendimentos</span>
     <h2>Cuidado clínico <em>e estético</em>.</h2>
-    <p class="sec-lead">Especialidades e serviços que a clínica informa no perfil público. Indicações e valores são definidos em consulta.</p>
+    <p class="sec-lead">Especialidades e serviços que a clínica informa no perfil público. Indicações e valores são definidos em consulta.</p></div><figure class="ph"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900" height="1125" alt="Mulher aplicando creme hidratante no rosto" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"></figure></div>
     <div class="svc" style="--svccols:4"><div class="s"><span class="n">01</span><h3>Consulta de dermatologia</h3><p>Avaliação dermatológica particular, com agenda online.</p></div><div class="s"><span class="n">02</span><h3>Consulta pelo convênio</h3><p>Atendimento pelo convênio Care Plus.</p></div><div class="s"><span class="n">03</span><h3>Toxina botulínica</h3><p>Aplicação de botox, listada entre os serviços da clínica.</p></div><div class="s"><span class="n">04</span><h3>Medicina estética</h3><p>Uma das duas especialidades informadas pela clínica.</p></div></div>
     <p class="src">Fonte: especialidades e serviços do perfil da clínica no Doctoralia, consultado em 03/11/2026.</p>
   </div>
@@ -171,10 +189,12 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 
 <section id="sobre">
   <div class="wrap">
+    <div class="about"><figure class="ph"><img src="https://images.unsplash.com/photo-1728727242233-0924178c1fb1?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900" height="1125" alt="Mulher sorrindo enquanto toca o rosto" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"></figure><div>
     <span class="kicker">Sobre</span>
     <h2>Nota máxima de <em>quem já foi atendido</em>.</h2>
     <p class="sec-lead">Números e informações públicas da Clínica Dermatológica Dra. Thayse Rosa.</p>
     <div class="facts"><div class="f"><div class="big">5<small>/5</small></div><h3>78 opiniões no Doctoralia</h3><p>Média máxima nas avaliações de pacientes.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div><div class="f"><div class="big">2</div><h3>endereços</h3><p>Recreio dos Bandeirantes e Campo Grande.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div><div class="f"><div class="big">Care Plus</div><h3>convênio aceito</h3><p>Também há atendimento particular.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div><div class="f"><div class="big">24h</div><h3>agenda online</h3><p>Calendário atualizado em tempo real no Doctoralia.</p><p class="src">Fonte: agenda on-line do perfil no Doctoralia.</p></div></div>
+    </div></div>
   </div>
 </section>
 
@@ -208,7 +228,7 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
     </div>
     <div class="legal">
       <span>Prévia · Corte &amp; Código · <a href="https://corteecodigo.vercel.app" target="_blank" rel="noopener">corteecodigo.vercel.app</a></span>
-      <span>Página de demonstração, não é o site oficial de Clínica Dermatológica Dra. Thayse Rosa.</span>
+      <span>Página de demonstração, não é o site oficial de Clínica Dermatológica Dra. Thayse Rosa. Imagens ilustrativas: Unsplash.</span>
     </div>
   </div>
 </footer>

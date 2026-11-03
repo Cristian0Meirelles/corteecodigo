@@ -127,6 +127,24 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 
 
+
+/* ---------- fotos (Unsplash, ilustrativas) ---------- */
+.ph{position:relative;overflow:hidden;isolation:isolate;background:var(--phbg);border-radius:var(--phr)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+.ph img.is-err{visibility:hidden}
+.hero-ph{position:relative;width:min(100%,520px);margin-inline:auto}
+.hero-ph .ph{height:clamp(280px,84vw,360px);box-shadow:var(--phsh)}
+@media (min-width:960px){.hero-ph .ph{height:auto;aspect-ratio:5/6}}
+.sec-head{display:grid;gap:28px;align-items:end}
+.sec-head .ph{aspect-ratio:3/2;box-shadow:var(--phsh)}
+@media (min-width:900px){.sec-head{grid-template-columns:1.05fr .95fr;gap:56px}}
+.about{display:grid;gap:34px}
+.about .ph{aspect-ratio:4/3;box-shadow:var(--phsh)}
+@media (min-width:960px){.about{grid-template-columns:.82fr 1.18fr;gap:56px;align-items:stretch}.about .ph{aspect-ratio:auto;height:100%;min-height:520px}.about .facts{grid-template-columns:repeat(2,1fr)}}
+:root{--phbg:linear-gradient(150deg,#E3F3EF 0%,#BFE6DF 55%,#12A39A 130%);--phr:32px;--phsh:0 40px 70px -46px rgba(11,43,42,.55)}
+.hero-ph .ph{border-radius:56px}
+.hero-ph::before{content:"";position:absolute;inset:22px -18px -18px 22px;z-index:-1;border-radius:62px;background:#E3F3EF}
+.hero-ph::after{content:"";position:absolute;right:-14px;top:-14px;width:84px;height:84px;border-radius:50%;background:#FFC857;box-shadow:0 16px 30px -14px rgba(11,43,42,.45)}
 </style>
 </head>
 <body>
@@ -150,12 +168,7 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
         <div class="cta rise d3" id="hero-cta"><a class="btn btn-pri" href="https://www.doctoralia.com.br/perfil/carla-santana" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h3"/></svg>Agendar online</a><a class="btn btn-wa" href="https://wa.me/5521988919091?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Carla%20Santana." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#wa"/></svg>Falar no WhatsApp</a></div>
         <div class="proof rise d4"><span class="chip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.26 6.85.7-5.13 4.6 1.46 6.74L12 16.9l-6.08 3.4 1.46-6.74L2.25 8.96l6.85-.7Z"/></svg><span><b>560 opiniões</b> no Doctoralia</span></span><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg><span>Agenda online</span></span></div>
       </div>
-      <div class="art rise d2" aria-hidden="true"><svg viewBox="0 0 480 480" fill="none"><rect x="20" y="20" width="440" height="440" rx="80" fill="#E3F3EF"/><circle cx="380" cy="110" r="46" fill="#FFC857"/>
-<path d="M80 220c40 120 280 120 320 0" stroke="#0B2B2A" stroke-opacity=".12" stroke-width="56" stroke-linecap="round"/>
-<path d="M80 220c40 120 280 120 320 0" stroke="#12A39A" stroke-width="5" stroke-linecap="round" stroke-dasharray="560" stroke-dashoffset="560"><animate attributeName="stroke-dashoffset" from="560" to="0" dur="1.6s" fill="freeze" begin=".3s"/></path>
-<g fill="#fff" stroke="#0B2B2A" stroke-opacity=".18" stroke-width="2"><rect x="96" y="226" width="38" height="44" rx="12"/><rect x="142" y="262" width="40" height="46" rx="12"/><rect x="194" y="280" width="42" height="48" rx="12"/><rect x="246" y="280" width="42" height="48" rx="12"/><rect x="298" y="262" width="40" height="46" rx="12"/><rect x="346" y="226" width="38" height="44" rx="12"/></g>
-<g fill="#12A39A"><rect x="108" y="240" width="14" height="10" rx="3"/><rect x="155" y="276" width="14" height="10" rx="3"/><rect x="208" y="295" width="14" height="10" rx="3"/><rect x="260" y="295" width="14" height="10" rx="3"/><rect x="311" y="276" width="14" height="10" rx="3"/><rect x="358" y="240" width="14" height="10" rx="3"/></g>
-<g stroke="#0B2B2A" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"><path d="M70 120h60M70 140h36"/></g></svg></div>
+      <div class="hero-ph rise d2"><figure class="ph"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" srcset="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=900&amp;q=80 900w, https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w" sizes="(min-width:960px) 520px, 100vw" width="1600" height="1067" alt="Consultório odontológico moderno com cadeira e equipamentos" fetchpriority="high" onerror="this.classList.add('is-err')"></figure></div>
     </div>
   </div>
 </div>
@@ -163,9 +176,9 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 <main>
 <section id="servicos">
   <div class="wrap">
-    <span class="kicker">Tratamentos</span>
+    <div class="sec-head"><div><span class="kicker">Tratamentos</span>
     <h2>Do aparelho ao <em>implante</em>.</h2>
-    <p class="sec-lead">Tratamentos e áreas de atuação que aparecem no perfil público da dentista. Cada caso começa por uma avaliação.</p>
+    <p class="sec-lead">Tratamentos e áreas de atuação que aparecem no perfil público da dentista. Cada caso começa por uma avaliação.</p></div><figure class="ph"><img src="https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900" height="1125" alt="Sorriso com dentes brancos e alinhados" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"></figure></div>
     <div class="svc" style="--svccols:4"><div class="s"><span class="n">01</span><h3>Avaliação ortodôntica</h3><p>Primeira consulta para entender o caso e indicar o tratamento.</p></div><div class="s"><span class="n">02</span><h3>Aparelho fixo e autoligado</h3><p>Opções de aparelho fixo convencional e autoligado.</p></div><div class="s"><span class="n">03</span><h3>Aparelho estético e de porcelana</h3><p>Alternativas mais discretas para quem usa aparelho.</p></div><div class="s"><span class="n">04</span><h3>Alinhadores</h3><p>Alinhadores estão entre as áreas de atuação listadas.</p></div><div class="s"><span class="n">05</span><h3>Implantes</h3><p>Avaliação e cirurgia de implante dentário.</p></div><div class="s"><span class="n">06</span><h3>Clareamento dental</h3><p>Avaliação de clareamento antes do tratamento.</p></div><div class="s"><span class="n">07</span><h3>Avaliação de siso</h3><p>Avaliação cirúrgica do dente siso.</p></div><div class="s"><span class="n">08</span><h3>Endodontia</h3><p>Tratamento de canal entre as áreas de experiência.</p></div></div>
     <p class="src">Fonte: serviços e áreas de experiência do perfil da Dra. Carla Santana no Doctoralia, consultado em 03/11/2026.</p>
   </div>
@@ -173,10 +186,12 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 
 <section id="sobre">
   <div class="wrap">
+    <div class="about"><figure class="ph"><img src="https://images.unsplash.com/photo-1777331903190-341a3dd0441b?auto=format&amp;fit=crop&amp;w=900&amp;q=80" width="900" height="1125" alt="Dentista conversando com uma paciente no consultório" loading="lazy" decoding="async" onerror="this.classList.add('is-err')"></figure><div>
     <span class="kicker">Sobre</span>
     <h2>Confiança construída <em>consulta a consulta</em>.</h2>
     <p class="sec-lead">Informações públicas do perfil profissional da Dra. Carla Santana.</p>
     <div class="facts"><div class="f"><div class="big">560</div><h3>opiniões no Doctoralia</h3><p>Avaliações de pacientes atendidos pela dentista.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div><div class="f"><div class="big">4</div><h3>áreas de atuação</h3><p>Ortodontia, implantodontia, endodontia e alinhadores.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div><div class="f"><div class="big">2</div><h3>endereços</h3><p>Taquara (Jacarepaguá) e Copacabana.</p><p class="src">Fonte: perfil no Doctoralia, consultado em 03/11/2026.</p></div><div class="f"><div class="big">24h</div><h3>agenda online</h3><p>Horários consultáveis a qualquer hora pelo Doctoralia.</p><p class="src">Fonte: agenda on-line do perfil no Doctoralia.</p></div></div>
+    </div></div>
   </div>
 </section>
 
@@ -210,7 +225,7 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
     </div>
     <div class="legal">
       <span>Prévia · Corte &amp; Código · <a href="https://corteecodigo.vercel.app" target="_blank" rel="noopener">corteecodigo.vercel.app</a></span>
-      <span>Página de demonstração, não é o site oficial de Dra. Carla Santana Odontologia.</span>
+      <span>Página de demonstração, não é o site oficial de Dra. Carla Santana Odontologia. Imagens ilustrativas: Unsplash.</span>
     </div>
   </div>
 </footer>

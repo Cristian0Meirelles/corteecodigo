@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/demo/:slug",
+      "destination": "/demo/:slug/index.html"
+    },
+    {
+      "source": "/demo/:slug/",
+      "destination": "/demo/:slug/index.html"
+    },
+    {
       "source": "/cortes",
       "destination": "/"
     },

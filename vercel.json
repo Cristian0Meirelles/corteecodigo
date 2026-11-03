@@ -9,8 +9,19 @@
       "destination": "/"
     },
     {
-      "source": "/((?!assets/|favicon.ico).*)",
+      "source": "/((?!assets/|favicon.ico|demo/).*)",
       "destination": "/"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/demo/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }

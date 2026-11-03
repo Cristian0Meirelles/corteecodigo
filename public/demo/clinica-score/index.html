@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Clínica Score · Prévia de site · Corte &amp; Código</title>
+<meta name="description" content="Prévia de site criada pela Corte & Código para a Clínica Score, na Barra da Tijuca. Não é o site oficial.">
+<meta name="theme-color" content="#0A1622">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0A1622; --night2:#102233; --night3:#17304A;
+  --paper:#F2F5F3; --white:#FFFFFF; --ink:#0A1622; --ink2:#41525F; --muted:#6C7C88;
+  --lime:#C4F25A; --mint:#3BD6B5; --sky:#6FB8FF;
+  --line:rgba(10,22,34,.11); --line-d:rgba(255,255,255,.1);
+  --disp:"Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --sans:"DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --r:18px; --wrap:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;padding-top:36px;overflow-x:clip}
+a{color:inherit}
+svg{display:block}
+.wrap{width:min(100% - 40px,var(--wrap));margin-inline:auto}
+
+/* faixa de prévia */
+.preview-bar{position:fixed;inset:0 0 auto 0;z-index:100;height:36px;display:block;padding:10px 14px;overflow:hidden;background:#05101A;color:#B9C7D2;font-size:12px;line-height:1.35;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.preview-bar a{color:var(--lime);font-weight:600;text-decoration:none;white-space:nowrap}
+.preview-bar a:hover{text-decoration:underline}
+@media (max-width:640px){.preview-bar{font-size:11.5px;height:48px;padding:8px 12px}body{padding-top:48px}.hide-sm{display:none}}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:12px;font-family:var(--disp);font-weight:600;font-size:15.5px;letter-spacing:-.005em;text-decoration:none;padding:16px 22px;transition:transform .2s ease,background .2s ease,box-shadow .2s ease;line-height:1}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px}
+.btn-lime{background:var(--lime);color:var(--night);box-shadow:0 12px 34px -14px rgba(196,242,90,.7)}
+.btn-lime:hover{background:#D3FA74}
+.btn-line{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.22)}
+.btn-line:hover{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}
+.btn-dark{background:var(--night);color:#fff}
+.btn-dark:hover{background:var(--night3)}
+.btn-sm{padding:11px 16px;font-size:14px;border-radius:10px}
+
+/* hero */
+.hero{background:var(--night);color:#fff;position:relative;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(600px 400px at 85% 20%,rgba(59,214,181,.18),transparent 70%),
+  radial-gradient(500px 380px at 10% 100%,rgba(111,184,255,.12),transparent 70%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(180deg,#000,transparent 85%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand b{font-family:var(--disp);font-weight:700;font-size:22px;letter-spacing:.14em}
+.brand small{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8DA0AF;font-weight:600;margin-top:1px}
+.nav ul{display:none;list-style:none;gap:30px;font-size:14.5px;color:#B9C7D2}
+.nav ul a{text-decoration:none}
+.nav ul a:hover{color:#fff}
+.nav .btn-sm{display:none}
+@media (min-width:900px){.nav ul{display:flex}.nav .btn-sm{display:inline-flex}}
+.hero-grid{display:grid;gap:40px;padding:26px 0 72px;align-items:center}
+@media (min-width:960px){.hero-grid{grid-template-columns:1.1fr .9fr;padding:48px 0 100px}}
+.tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--disp);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);font-weight:600}
+.tag i{width:8px;height:8px;border-radius:2px;background:var(--lime);box-shadow:0 0 14px var(--lime)}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(42px,10.5vw,82px);line-height:.98;letter-spacing:-.035em;margin:22px 0 22px}
+h1 span{color:var(--mint)}
+.lead{font-size:clamp(16.5px,2vw,19px);color:#B9C7D2;max-width:44ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.cta .btn{flex:1 1 auto}
+@media (min-width:560px){.cta .btn{flex:0 0 auto}}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.badge{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px var(--line-d);font-size:14px;color:#D5E0E8}
+.badge b{font-family:var(--disp);color:#fff}
+.badge svg{width:18px;height:18px;color:var(--lime)}
+
+/* dial */
+.dial{position:relative;width:min(100%,460px);margin-inline:auto;aspect-ratio:1}
+.dial svg{width:100%;height:100%}
+.dial .center{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.dial .center div{max-width:56%}
+.dial .center b{display:block;font-family:var(--disp);font-size:clamp(52px,14vw,84px);line-height:.9;letter-spacing:-.04em;font-weight:600}
+.dial .center span{display:block;margin-top:8px;font-size:13px;color:#8DA0AF;letter-spacing:.12em;text-transform:uppercase;font-family:var(--disp)}
+.arc{stroke-dasharray:var(--len) 1000;animation:draw 1.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes draw{from{stroke-dasharray:0 1000}}
+.legend{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 18px;margin-top:20px;font-size:13.5px;color:#B9C7D2;max-width:460px;margin-inline:auto}
+.legend li{display:flex;gap:9px;align-items:center;list-style:none}
+.legend i{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+
+/* seções */
+section{padding:88px 0}
+.label{font-family:var(--disp);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#14907A;display:flex;align-items:center;gap:10px}
+.label b{font-weight:600;color:var(--muted)}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(34px,6.4vw,56px);line-height:1;letter-spacing:-.03em;margin:14px 0 16px;max-width:18ch}
+.sec-lead{color:var(--ink2);max-width:58ch;font-size:17px}
+
+/* especialidades */
+.feature{margin-top:44px;border-radius:24px;background:var(--white);box-shadow:0 30px 60px -44px rgba(10,22,34,.5),inset 0 0 0 1px var(--line);display:grid;overflow:hidden}
+@media (min-width:960px){.feature{grid-template-columns:.9fr 1.1fr}}
+.feature-l{padding:32px;background:linear-gradient(160deg,#EAFBE0,#DDF6F0);position:relative}
+.feature-l .ico{background:var(--night);color:var(--lime)}
+.feature-l h3{font-family:var(--disp);font-size:clamp(28px,4vw,38px);line-height:1.05;letter-spacing:-.025em;margin:22px 0 10px}
+.feature-l p{color:var(--ink2);font-size:15.5px;max-width:40ch}
+.feature-r{padding:32px}
+.feature-r h4{font-family:var(--disp);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:14px}
+.svc{list-style:none;display:grid;gap:0}
+.svc li{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px;font-weight:500}
+.svc li:last-child{border-bottom:0}
+.svc li::after{content:"";width:22px;height:22px;flex-shrink:0;border-radius:7px;background:#EEF3F1 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230A1622' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12 4 4 8-8'/%3E%3C/svg%3E") center/13px no-repeat}
+.cards{display:grid;gap:14px;margin-top:14px}
+@media (min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.cards{grid-template-columns:repeat(5,1fr)}}
+.card{background:var(--white);border-radius:var(--r);padding:24px;box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:14px;transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1px var(--line),0 24px 40px -30px rgba(10,22,34,.45)}
+.ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:#EEF3F1;color:var(--night)}
+.ico svg{width:24px;height:24px}
+@media (max-width:639px){.card{display:grid;grid-template-columns:46px 1fr;column-gap:16px;row-gap:4px;padding:20px}.card .ico{grid-row:span 2}}
+.card h3{font-family:var(--disp);font-size:19px;letter-spacing:-.015em;line-height:1.2}
+.card p{font-size:14.5px;color:var(--ink2);line-height:1.5}
+.card .pill{margin-top:auto;align-self:flex-start;font-size:12.5px;font-weight:600;padding:6px 10px;border-radius:8px;background:#F1F9DD;color:#3E5A08}
+.note{font-size:12.5px;color:var(--muted);margin-top:18px}
+
+/* números */
+.facts{background:var(--night);color:#fff}
+.facts .label{color:var(--lime)}
+.facts .label b{color:#8DA0AF}
+.facts h2{color:#fff}
+.facts .sec-lead{color:#B9C7D2}
+.fgrid{display:grid;gap:1px;margin-top:46px;background:var(--line-d);border-radius:22px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line-d)}
+@media (min-width:700px){.fgrid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1050px){.fgrid{grid-template-columns:repeat(4,1fr)}}
+.f{background:var(--night2);padding:30px 26px;display:flex;flex-direction:column;gap:10px;min-height:230px}
+.f .big{font-family:var(--disp);font-size:58px;line-height:.95;letter-spacing:-.04em;font-weight:600;color:#fff}
+.f .big small{font-size:26px;color:#8DA0AF;letter-spacing:-.02em}
+.f h3{font-family:var(--disp);font-size:17px;font-weight:600;letter-spacing:-.01em}
+.f p{font-size:14.5px;color:#B9C7D2;line-height:1.5}
+.f .src{margin-top:auto;padding-top:10px;font-size:12px;color:#7F93A3}
+.f .chips{display:flex;flex-wrap:wrap;gap:6px}
+.f .chips span{font-size:13px;padding:5px 10px;border-radius:8px;background:rgba(196,242,90,.12);color:var(--lime);font-weight:600}
+.f svg.fi{width:46px;height:46px;color:var(--lime)}
+
+/* agendar */
+.steps{display:grid;gap:14px;margin-top:44px}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--white);border-radius:var(--r);padding:28px;box-shadow:inset 0 0 0 1px var(--line);display:grid;gap:10px;align-content:start}
+.step .n{font-family:var(--disp);font-size:13px;font-weight:600;letter-spacing:.12em;color:#14907A;display:flex;align-items:center;gap:10px}
+.step .n::after{content:"";flex:1;height:1px;background:var(--line)}
+.step h3{font-family:var(--disp);font-size:21px;letter-spacing:-.02em}
+.step p{color:var(--ink2);font-size:15px}
+.step a{font-weight:600}
+.band{margin-top:22px;border-radius:24px;padding:34px 28px;background:var(--night);color:#fff;display:grid;gap:22px;align-items:center;position:relative;overflow:hidden;isolation:isolate}
+.band::before{content:"";position:absolute;right:-80px;top:-120px;width:340px;height:340px;border-radius:50%;z-index:-1;border:44px solid rgba(196,242,90,.14);box-shadow:0 0 0 44px rgba(59,214,181,.06)}
+.band h3{font-family:var(--disp);font-size:clamp(28px,4.6vw,40px);letter-spacing:-.03em;line-height:1.05}
+.band p{color:#B9C7D2;margin-top:6px;font-size:15px}
+@media (min-width:900px){.band{grid-template-columns:1fr auto;padding:44px 48px}}
+
+/* local */
+#localizacao{padding-top:20px}
+.loc{display:grid;gap:14px;margin-top:44px}
+@media (min-width:900px){.loc{grid-template-columns:1fr 1.15fr}}
+.loc-card{background:var(--white);border-radius:var(--r);padding:30px;box-shadow:inset 0 0 0 1px var(--line)}
+.loc-card dl{display:grid;gap:18px}
+.loc-card dt{font-family:var(--disp);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:4px}
+.loc-card dd{font-size:16.5px}
+.loc-card dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+.loc-card .btn{margin-top:26px;width:100%}
+@media (min-width:560px){.loc-card .btn{width:auto}}
+.map-art{display:block;border-radius:var(--r);overflow:hidden;min-height:300px;position:relative;background:var(--night)}
+.map-art svg{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;left:38%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center}
+.pin b{width:18px;height:18px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 8px rgba(196,242,90,.22),0 0 0 20px rgba(196,242,90,.08)}
+.pin span{position:absolute;left:30px;white-space:nowrap;font-family:var(--disp);font-size:13px;font-weight:600;color:var(--night);background:var(--lime);padding:7px 12px;border-radius:8px}
+
+/* footer */
+footer{background:#05101A;color:#8DA0AF;padding:56px 0 110px;font-size:14px}
+@media (min-width:900px){footer{padding-bottom:48px}}
+.foot{display:grid;gap:28px}
+@media (min-width:900px){.foot{grid-template-columns:1.3fr 1fr 1fr}}
+footer .brand b{color:#fff}
+footer h4{font-family:var(--disp);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:10px;font-weight:600}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.legal{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12.5px;color:#6E8292}
+.legal a{color:var(--lime)}
+
+/* WhatsApp flutuante */
+.fab{position:fixed;z-index:90;left:16px;right:16px;bottom:16px;display:flex;transition:transform .35s ease,opacity .35s ease}
+.fab .btn{width:100%;padding:17px 22px;box-shadow:0 18px 40px -12px rgba(10,22,34,.55)}
+.fab.off{transform:translateY(120%);opacity:0;pointer-events:none}
+@media (min-width:900px){.fab{display:none}}
+
+.rise{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}.d4{animation-delay:.32s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rise{opacity:1;transform:none}html{scroll-behavior:auto}}
+.fab{gap:10px}.fab .btn-dark{flex:0 0 auto;width:auto;background:var(--night);color:#fff}.fab .btn-lime{flex:1}
+.band .cta2{display:flex;flex-wrap:wrap;gap:12px}
+@media (min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
+a:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<div class="preview-bar" role="note">Prévia criada pela Corte &amp; Código para Clínica Score · não é o site oficial · <a href="https://wa.me/5521982778045?text=Oi%20Cristiano%2C%20vi%20a%20pr%C3%A9via%20do%20site%20da%20Cl%C3%ADnica%20Score" target="_blank" rel="noopener">Falar com o Cristiano</a></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+</svg>
+
+<div class="hero" id="inicio">
+  <div class="wrap">
+    <header class="nav">
+      <a class="brand" href="#inicio" aria-label="Clínica Score, início">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="14" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="4"/><circle cx="18" cy="18" r="14" fill="none" stroke="#C4F25A" stroke-width="4" stroke-linecap="round" stroke-dasharray="66 88" transform="rotate(-90 18 18)"/><circle cx="18" cy="18" r="4" fill="#3BD6B5"/></svg>
+        <span><b>SCORE</b><small>Clínica · Barra</small></span>
+      </a>
+      <ul>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#agendar">Como agendar</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+      </ul>
+      <a class="btn btn-lime btn-sm" href="https://www.doctoralia.com.br/clinicas/clinica-score" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h3"/></svg>Agendar online</a>
+    </header>
+
+    <div class="hero-grid">
+      <div>
+        <span class="tag rise"><i></i>Policlínica<span class="hide-sm">&nbsp;· Barra da Tijuca</span></span>
+        <h1 class="rise d1">Saúde metabólica e cuidado <span>integrado</span>.</h1>
+        <p class="lead rise d2">Endocrinologia, cardiologia, pneumologia, urologia e ginecologia, nutrição, psicologia e harmonização orofacial no mesmo endereço, com consulta presencial ou teleconsulta.</p>
+        <div class="cta rise d3" id="hero-cta">
+          <a class="btn btn-lime" href="https://www.doctoralia.com.br/clinicas/clinica-score" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h3"/></svg>Agendar online</a>
+          <a class="btn btn-line" href="https://wa.me/5521994510921?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Score." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+        </div>
+        <div class="badges rise d4">
+          <div class="badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.7-5.13 4.6 1.46 6.74L12 16.9l-6.08 3.4 1.46-6.74L2.25 8.96l6.85-.7Z"/></svg><span><b>5/5</b> · 461 opiniões no Doctoralia</span></div>
+          <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="13" height="12" rx="2.5"/><path d="m16 10 5-3v10l-5-3"/></svg><span>Teleconsulta</span></div>
+        </div>
+      </div>
+
+      <div class="rise d2">
+        <div class="dial" aria-hidden="true">
+          <svg viewBox="0 0 400 400" fill="none">
+            <circle cx="200" cy="200" r="186" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+            <circle cx="200" cy="200" r="150" stroke="rgba(255,255,255,.07)" stroke-width="22"/>
+            <g stroke-width="22" stroke-linecap="round" transform="rotate(-90 200 200)">
+              <!-- circunferência ~942; 7 segmentos de ~134,6 com folga -->
+              <circle class="arc" style="--len:118" cx="200" cy="200" r="150" stroke="#C4F25A" stroke-dashoffset="0"/>
+              <circle class="arc" style="--len:118;animation-delay:0.1s" cx="200" cy="200" r="150" stroke="#3BD6B5" stroke-dashoffset="-135"/>
+              <circle class="arc" style="--len:118;animation-delay:0.2s" cx="200" cy="200" r="150" stroke="#6FB8FF" stroke-dashoffset="-269"/>
+              <circle class="arc" style="--len:118;animation-delay:0.3s" cx="200" cy="200" r="150" stroke="#A99BFF" stroke-dashoffset="-404"/>
+              <circle class="arc" style="--len:118;animation-delay:0.4s" cx="200" cy="200" r="150" stroke="#FF9F80" stroke-dashoffset="-538"/>
+              <circle class="arc" style="--len:118;animation-delay:0.5s" cx="200" cy="200" r="150" stroke="#F5D76E" stroke-dashoffset="-673"/>
+              <circle class="arc" style="--len:118;animation-delay:0.6s" cx="200" cy="200" r="150" stroke="#FF7EB6" stroke-dashoffset="-808"/>
+            </g>
+            <circle cx="200" cy="200" r="112" stroke="rgba(255,255,255,.08)" stroke-dasharray="2 8"/>
+          </svg>
+          <div class="center"><div><b>7</b><span>áreas<br>num só lugar</span></div></div>
+        </div>
+        <ul class="legend">
+          <li><i style="background:#C4F25A"></i>Endocrinologia</li>
+          <li><i style="background:#3BD6B5"></i>Cardiologia</li>
+          <li><i style="background:#6FB8FF"></i>Pneumologia</li>
+          <li><i style="background:#A99BFF"></i>Urologia e ginecologia</li>
+          <li><i style="background:#FF9F80"></i>Nutrição</li>
+          <li><i style="background:#F5D76E"></i>Harmonização orofacial</li>
+          <li><i style="background:#FF7EB6"></i>Psicologia</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+<section id="especialidades">
+  <div class="wrap">
+    <span class="label">01 <b>/ Especialidades</b></span>
+    <h2>Uma equipe, vários olhares sobre a sua saúde.</h2>
+    <p class="sec-lead">Especialistas de diferentes áreas no mesmo endereço, para que o acompanhamento fique mais simples para você.</p>
+
+    <div class="feature">
+      <div class="feature-l">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-2 3-5 5.5-5 9a5 5 0 0 0 10 0c0-3.5-3-6-5-9Z"/><path d="M10 14a2 2 0 0 0 2 2"/></svg></div>
+        <h3>Endocrinologia e metabologia</h3>
+        <p>Consultas e acompanhamento com endocrinologista, também em conjunto com a nutrição.</p>
+      </div>
+      <div class="feature-r">
+        <h4>Atendimentos listados</h4>
+        <ul class="svc">
+          <li>Tratamento para diabetes</li>
+          <li>Diabetes gestacional</li>
+          <li>Diabetes mellitus, obesidade e síndrome metabólica</li>
+          <li>Acompanhamento de nódulos tireoidianos</li>
+          <li>Avaliação de bioimpedância</li>
+          <li>Consulta de endocrinologia e nutrição</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.6A5 5 0 0 0 12 5.5a5 5 0 0 0-8.8 3.1C3.2 14 12 20 12 20s8.8-6 8.8-11.4Z"/><path d="M3.5 12h4l2-3 3 6 2-3h6"/></svg></div>
+        <h3>Cardiologia</h3><p>Consultas com cardiologista.</p>
+      </div>
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v7"/><path d="M12 11c-1.5 1-2.5 1.5-4 1.5"/><path d="M12 11c1.5 1 2.5 1.5 4 1.5"/><path d="M8.5 7C5 7 3 12 3 16.5c0 2 1 3.5 3 3.5 2.5 0 3.5-2 3.5-5V8"/><path d="M15.5 7c3.5 0 5.5 5 5.5 9.5 0 2-1 3.5-3 3.5-2.5 0-3.5-2-3.5-5V8"/></svg></div>
+        <h3>Pneumologia</h3><p>Consultas com pneumologista.</p>
+      </div>
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg></div>
+        <h3>Urologia e ginecologia</h3><p>A área “Urogineco”. Laser íntimo Athena mediante consulta prévia.</p>
+      </div>
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8c-3.5-3-8-1-8 4 0 5 4 9 6 9 1 0 1.3-.5 2-.5s1 .5 2 .5c2 0 6-4 6-9 0-5-4.5-7-8-4Z"/><path d="M12 8c0-2 1-4 3-5"/></svg></div>
+        <h3>Nutrição</h3><p>Acompanhamento nutricional, também integrado à endocrinologia.</p>
+      </div>
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4.5 0-7 3.5-7 8 0 5 3.5 10 7 10s7-5 7-10c0-4.5-2.5-8-7-8Z"/><path d="M9 15c1.8 1.3 4.2 1.3 6 0"/><path d="M9 10h.01M15 10h.01"/></svg></div>
+        <h3>Harmonização orofacial</h3><p>Avaliação e procedimentos com especialista.</p>
+      </div>
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21v-3.5H6.5A2.5 2.5 0 0 1 4 15v-2.5L2.5 11 4 8.5A6.5 6.5 0 0 1 10.5 3H12a7 7 0 0 1 7 7c0 2.6-1.2 4.4-3 5.6V21"/><path d="M10 9.5a2 2 0 1 1 3 1.7c-.6.4-1 .8-1 1.5"/></svg></div>
+        <h3>Psicologia</h3><p>Atendimento psicológico, parte do cuidado integral da clínica.</p>
+      </div>
+    </div>
+    <p class="note">Áreas conforme a bio do Instagram @clinicascore (Endocrino, Cardio, Pneumo, Urogineco, Nutrição, Psicologia, HOF) e serviços do perfil no Doctoralia. Disponibilidade, valores e convênios por especialidade: confirme pelo WhatsApp.</p>
+  </div>
+</section>
+
+<section class="facts" id="diferenciais">
+  <div class="wrap">
+    <span class="label">02 <b>/ Diferenciais</b></span>
+    <h2>Avaliada por quem já foi atendido.</h2>
+    <div class="fgrid">
+      <div class="f">
+        <div class="big">5<small>/5</small></div>
+        <h3>461 opiniões no Doctoralia</h3>
+        <p>Média máxima nas avaliações de pacientes.</p>
+        <p class="src">Fonte: Doctoralia, consultado em 03/11/2026.</p>
+      </div>
+      <div class="f">
+        <div class="big">7</div>
+        <h3>áreas integradas</h3>
+        <p>Da endocrinologia à psicologia, no mesmo endereço.</p>
+        <p class="src">Fonte: bio do Instagram @clinicascore.</p>
+      </div>
+      <div class="f">
+        <svg class="fi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="13" height="12" rx="2.5"/><path d="m16 10 5-3v10l-5-3"/></svg>
+        <h3>Teleconsulta</h3>
+        <p>Atendimento on-line para quem não pode ir até a clínica.</p>
+        <p class="src">Fonte: perfil no Doctoralia.</p>
+      </div>
+      <div class="f">
+        <svg class="fi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h4"/></svg>
+        <h3>Convênios</h3>
+        <div class="chips"><span>Amil</span><span>Bradesco Saúde</span><span>MedSênior</span></div>
+        <p class="src">Citados no Doctoralia. Confirme seu plano pelo WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="agendar">
+  <div class="wrap">
+    <span class="label">03 <b>/ Como agendar</b></span>
+    <h2>Do WhatsApp à consulta em três passos.</h2>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><h3>Agende online ou chame no WhatsApp</h3><p>Escolha o horário na <a href="https://www.doctoralia.com.br/clinicas/clinica-score" target="_blank" rel="noopener">agenda do Doctoralia</a>, a mesma que a clínica já usa, ou fale com a equipe pelo WhatsApp <a href="https://wa.me/5521994510921?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Score." target="_blank" rel="noopener">(21) 99451-0921</a>.</p></div>
+      <div class="step"><span class="n">02</span><h3>Escolha especialidade e formato</h3><p>Presencial ou teleconsulta, particular ou convênio. A equipe orienta.</p></div>
+      <div class="step"><span class="n">03</span><h3>Confirme o horário</h3><p>Receba a confirmação de dia e horário e, se for o caso, o preparo para exames.</p></div>
+    </div>
+    <div class="band">
+      <div><h3>Pronto para marcar?</h3><p>Agenda online pelo Doctoralia ou atendimento pelo WhatsApp da Clínica Score.</p></div>
+      <div class="cta2"><a class="btn btn-lime" href="https://www.doctoralia.com.br/clinicas/clinica-score" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h3"/></svg>Agendar online</a><a class="btn btn-dark" style="background:#fff;color:var(--night)" href="https://wa.me/5521994510921?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Score." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="localizacao">
+  <div class="wrap">
+    <span class="label">04 <b>/ Localização</b></span>
+    <h2>Na Barra da Tijuca.</h2>
+    <div class="loc">
+      <div class="loc-card">
+        <dl>
+          <div><dt>Endereço</dt><dd>Av. João Cabral de Mello Neto, 850<br>Bloco 2, sala 804<br>Barra da Tijuca, Rio de Janeiro – RJ<br>CEP 22775-057</dd></div>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5521994510921?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Score." target="_blank" rel="noopener">(21) 99451-0921</a></dd></div>
+        </dl>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Cl%C3%ADnica%20Score%2C%20Av.%20Jo%C3%A3o%20Cabral%20de%20Mello%20Neto%2C%20850%2C%20Bloco%202%2C%20804%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022775-057" target="_blank" rel="noopener">Abrir no Google Maps →</a>
+      </div>
+      <a class="map-art" href="https://www.google.com/maps/search/?api=1&amp;query=Cl%C3%ADnica%20Score%2C%20Av.%20Jo%C3%A3o%20Cabral%20de%20Mello%20Neto%2C%20850%2C%20Bloco%202%2C%20804%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022775-057" target="_blank" rel="noopener" aria-label="Abrir a localização no Google Maps">
+        <svg viewBox="0 0 600 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><pattern id="g" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="rgba(255,255,255,.05)"/></pattern></defs>
+          <rect width="600" height="380" fill="#0A1622"/><rect width="600" height="380" fill="url(#g)"/>
+          <path d="M-20 320 C 140 280, 260 330, 380 300 S 560 250, 640 270 L 640 400 L -20 400Z" fill="#102A3E"/>
+          <g fill="none" stroke-linecap="round"><path d="M-20 150 C 160 140, 420 170, 640 150" stroke="rgba(255,255,255,.14)" stroke-width="12"/><path d="M330 -10 C 320 120, 330 260, 300 400" stroke="rgba(255,255,255,.1)" stroke-width="8"/><path d="M80 -10 L 120 400" stroke="rgba(255,255,255,.06)" stroke-width="5"/><path d="M500 -10 L 470 400" stroke="rgba(255,255,255,.06)" stroke-width="5"/></g>
+          <g fill="rgba(255,255,255,.05)"><rect x="140" y="40" width="90" height="70" rx="8"/><rect x="360" y="190" width="90" height="70" rx="8"/><rect x="150" y="190" width="120" height="60" rx="8"/><rect x="380" y="40" width="80" height="80" rx="8"/></g>
+        </svg>
+        <div class="pin"><b></b><span>Clínica Score</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#inicio"><svg width="32" height="32" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="14" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="4"/><circle cx="18" cy="18" r="14" fill="none" stroke="#C4F25A" stroke-width="4" stroke-linecap="round" stroke-dasharray="66 88" transform="rotate(-90 18 18)"/></svg><span><b>SCORE</b><small>Clínica · Barra</small></span></a>
+        <p style="margin-top:14px;max-width:36ch">Policlínica na Barra da Tijuca, Rio de Janeiro.</p>
+      </div>
+      <div><h4>Contato</h4><p><a href="https://wa.me/5521994510921?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Score." target="_blank" rel="noopener">WhatsApp (21) 99451-0921</a><br><a href="https://www.doctoralia.com.br/clinicas/clinica-score" target="_blank" rel="noopener">Agenda online (Doctoralia)</a></p></div>
+      <div><h4>Endereço</h4><p>Av. João Cabral de Mello Neto, 850<br>Bloco 2, sala 804 · Barra da Tijuca<br>Rio de Janeiro – RJ · 22775-057</p></div>
+    </div>
+    <div class="legal">
+      <span>Prévia · Corte &amp; Código · <a href="https://corteecodigo.vercel.app" target="_blank" rel="noopener">corteecodigo.vercel.app</a></span>
+      <span>Página de demonstração, não é o site oficial da Clínica Score.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="fab off" id="fab"><a class="btn btn-lime" href="https://www.doctoralia.com.br/clinicas/clinica-score" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h3"/></svg>Agendar online</a><a class="btn btn-dark" href="https://wa.me/5521994510921?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Score." target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a></div>
+
+<script>
+(function(){var f=document.getElementById('fab'),c=document.getElementById('hero-cta');
+if(!('IntersectionObserver' in window)){f.classList.remove('off');return}
+new IntersectionObserver(function(e){f.classList.toggle('off',e[0].isIntersecting)}).observe(c);})();
+</script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Clínica Lumiti Saúde · Prévia de site · Corte &amp; Código</title>
+<meta name="description" content="Prévia de site criada pela Corte & Código para a Clínica Lumiti Saúde, na Barra da Tijuca. Não é o site oficial.">
+<meta name="theme-color" content="#FBF7F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF7F1; --bg2:#F4EDE3; --ink:#0E3433; --ink2:#3F5D5B; --muted:#6F8482;
+  --line:rgba(14,52,51,.12); --sun1:#FFC979; --sun2:#F59A6B; --sun3:#E9707A;
+  --teal:#13605C; --card:#FFFFFF;
+  --serif:"Instrument Serif", Georgia, "Times New Roman", serif;
+  --sans:"Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --r:22px; --wrap:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;padding-top:36px;overflow-x:clip}
+a{color:inherit}
+img,svg{display:block}
+.wrap{width:min(100% - 40px,var(--wrap));margin-inline:auto}
+
+/* ---------- faixa de prévia ---------- */
+.preview-bar{position:fixed;inset:0 0 auto 0;z-index:100;height:36px;display:block;padding:10px 14px;overflow:hidden;background:#0B2423;color:#D9E6E4;font-size:12px;line-height:1.35;text-align:center}
+.preview-bar a{color:#FFD49A;font-weight:600;text-decoration:none;white-space:nowrap}
+.preview-bar a:hover{text-decoration:underline}
+@media (max-width:640px){.preview-bar{font-size:11.5px;height:48px;padding:8px 12px}body{padding-top:48px!important}.hide-sm{display:none}}
+
+/* ---------- header ---------- */
+header.top{position:relative;z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand b{font-family:var(--serif);font-weight:400;font-size:30px;letter-spacing:.01em;line-height:1}
+.brand small{display:block;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:3px}
+.nav ul{display:none;list-style:none;gap:30px;font-size:14.5px;font-weight:500;color:var(--ink2)}
+.nav ul a{text-decoration:none}
+.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;padding:15px 24px;transition:transform .2s ease, box-shadow .2s ease, background .2s ease;border:0;cursor:pointer;line-height:1}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--ink);color:#fff;box-shadow:0 10px 30px -10px rgba(14,52,51,.55)}
+.btn-wa:hover{background:#0A2928}
+.btn-wa svg{width:20px;height:20px}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-sm{padding:11px 18px;font-size:14px}
+.nav .btn-sm{display:none}
+@media (min-width:900px){.nav ul{display:flex}.nav .btn-sm{display:inline-flex}}
+
+/* ---------- hero ---------- */
+.above{position:relative;overflow:hidden;isolation:isolate}
+.hero{position:relative;padding:18px 0 70px}
+.sun{position:absolute;z-index:-1;right:-30vw;top:40px;width:110vw;max-width:880px;aspect-ratio:1;pointer-events:none}
+.sun .glow{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle at 50% 50%,var(--sun1) 0%,var(--sun2) 38%,rgba(233,112,122,.55) 58%,rgba(233,112,122,0) 72%);filter:blur(6px);opacity:.85;animation:breathe 9s ease-in-out infinite}
+.sun svg{position:absolute;inset:0;width:100%;height:100%}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+@media (min-width:900px){.sun{right:-120px;top:-40px;width:760px}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--teal);background:rgba(255,255,255,.7);backdrop-filter:blur(6px);padding:8px 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line)}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--sun3);box-shadow:0 0 0 4px rgba(233,112,122,.18)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,12.5vw,104px);line-height:.95;letter-spacing:-.015em;margin:26px 0 22px;max-width:11ch}
+@media (min-width:900px){h1{max-width:13ch}}
+h1 em{font-style:italic;background:linear-gradient(100deg,#D9644F 10%,#E9707A 55%,#C9577E 95%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.lead{font-size:clamp(17px,2.2vw,19.5px);color:var(--ink2);max-width:36ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.cta .btn{flex:1 1 auto}
+@media (min-width:560px){.cta .btn{flex:0 0 auto}}
+.proof{margin-top:44px;display:grid;gap:14px;grid-template-columns:1fr}
+.proof-card{background:rgba(255,255,255,.78);backdrop-filter:blur(10px);border-radius:var(--r);padding:18px 20px;box-shadow:0 1px 0 rgba(255,255,255,.8) inset,0 20px 40px -28px rgba(14,52,51,.4);display:flex;align-items:center;gap:16px}
+.proof-card .num{font-family:var(--serif);font-size:44px;line-height:1}
+.proof-card p{font-size:14px;color:var(--ink2);line-height:1.4}
+.proof-card p strong{color:var(--ink);display:block;font-size:15px}
+.stars{display:flex;gap:2px;margin-bottom:4px}
+.stars svg{width:14px;height:14px;fill:#F0A045}
+@media (min-width:700px){.proof{grid-template-columns:repeat(2,max-content)}}
+
+/* ---------- sections ---------- */
+section{padding:84px 0}
+.kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--teal);display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:28px;height:1.5px;background:currentColor}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(38px,7vw,64px);line-height:1;letter-spacing:-.01em;margin:16px 0 18px;max-width:16ch}
+h2 em{font-style:italic;color:#D9644F}
+.sec-lead{color:var(--ink2);max-width:58ch;font-size:17px}
+
+/* especialidades */
+#especialidades{background:var(--card);border-radius:36px 36px 0 0;position:relative}
+.groups{display:grid;gap:18px;margin-top:44px}
+@media (min-width:900px){.groups{grid-template-columns:1.55fr 1fr}}
+.group{border-radius:var(--r);padding:26px;background:var(--bg);box-shadow:inset 0 0 0 1px var(--line)}
+.group-head{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;flex-shrink:0;background:linear-gradient(140deg,#FFE2B8,#F8B7A0);color:var(--ink)}
+.ico svg{width:24px;height:24px}
+.group h3{font-size:19px;font-weight:700;letter-spacing:-.01em}
+.group-head p{font-size:13.5px;color:var(--muted);line-height:1.3}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.chips li{font-size:14.5px;font-weight:500;background:#fff;padding:9px 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line)}
+.stack{display:grid;gap:18px}
+.exams{margin-top:18px;border-radius:var(--r);padding:28px;background:var(--ink);color:#E6EFEE;position:relative;overflow:hidden}
+.exams::after{content:"";position:absolute;right:-80px;bottom:-120px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(255,201,121,.55),rgba(233,112,122,0) 70%)}
+.exams h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.1;color:#fff;margin-bottom:6px}
+.exams>p{font-size:14.5px;color:#A9C2BF;max-width:60ch}
+.exams ul{list-style:none;display:grid;gap:10px;margin-top:20px;position:relative;z-index:1}
+@media (min-width:700px){.exams ul{grid-template-columns:repeat(3,1fr)}}
+.exams li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.4;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.exams li::before{content:"";width:8px;height:8px;border-radius:50%;margin-top:6px;flex-shrink:0;background:var(--sun1)}
+.src{font-size:12.5px;color:var(--muted);margin-top:18px}
+.exams .src{color:#86A3A0;position:relative;z-index:1}
+
+/* diferenciais */
+#diferenciais{background:var(--card);padding-top:20px}
+.facts{display:grid;gap:16px;margin-top:44px}
+@media (min-width:700px){.facts{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1050px){.facts{grid-template-columns:repeat(4,1fr)}}
+.fact{border-radius:var(--r);padding:26px;background:linear-gradient(180deg,#FFF8EE,#FBF1E6);box-shadow:inset 0 0 0 1px rgba(217,100,79,.14);display:flex;flex-direction:column;gap:10px;min-height:220px}
+.fact .big{font-family:var(--serif);font-size:54px;line-height:1;letter-spacing:-.01em}
+.fact .big small{font-size:24px;color:var(--muted)}
+.fact h3{font-size:16.5px;font-weight:700;line-height:1.3}
+.fact p{font-size:14.5px;color:var(--ink2);line-height:1.5}
+.fact .src{margin-top:auto;padding-top:8px;font-size:12px}
+
+/* agendar */
+#agendar{background:var(--bg)}
+.steps{display:grid;gap:16px;margin-top:44px;counter-reset:s}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:#fff;border-radius:var(--r);padding:28px;box-shadow:0 20px 40px -32px rgba(14,52,51,.45),inset 0 0 0 1px var(--line);position:relative}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--serif);font-size:44px;line-height:1;display:block;margin-bottom:18px;background:linear-gradient(120deg,var(--sun2),var(--sun3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h3{font-size:18px;font-weight:700;margin-bottom:6px}
+.step p{color:var(--ink2);font-size:15px}
+.step a{font-weight:600}
+.cta-band{margin-top:28px;border-radius:28px;padding:34px 28px;background:linear-gradient(120deg,#FFD9A3 0%,#F7A47E 50%,#EE8A90 100%);display:grid;gap:20px;align-items:center}
+.cta-band h3{font-family:var(--serif);font-weight:400;font-size:clamp(30px,5vw,44px);line-height:1.05}
+.cta-band p{color:#3B2A27;font-size:15px;margin-top:6px}
+@media (min-width:900px){.cta-band{grid-template-columns:1fr auto;padding:44px 48px}}
+
+/* local */
+#localizacao{background:var(--bg);padding-top:20px}
+.loc{display:grid;gap:18px;margin-top:44px}
+@media (min-width:900px){.loc{grid-template-columns:1fr 1.1fr}}
+.loc-card{background:#fff;border-radius:var(--r);padding:30px;box-shadow:inset 0 0 0 1px var(--line)}
+.loc-card dl{display:grid;gap:18px}
+.loc-card dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:4px}
+.loc-card dd{font-size:16.5px;line-height:1.5}
+.loc-card dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+.loc-card .btn{margin-top:26px;width:100%}
+@media (min-width:560px){.loc-card .btn{width:auto}}
+.map-art{border-radius:var(--r);overflow:hidden;min-height:300px;position:relative;background:#EAF0EC;box-shadow:inset 0 0 0 1px var(--line)}
+.map-art svg{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;left:50%;top:48%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center}
+.pin span{background:var(--ink);color:#fff;font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 10px 24px -10px rgba(0,0,0,.5)}
+.pin i{width:2px;height:22px;background:var(--ink)}
+.pin b{width:16px;height:16px;border-radius:50%;background:var(--sun3);box-shadow:0 0 0 6px rgba(233,112,122,.25),0 0 0 14px rgba(233,112,122,.12)}
+
+/* footer */
+footer{background:var(--ink);color:#B8CCCA;padding:56px 0 110px;font-size:14px}
+footer .brand b{color:#fff}
+footer .brand small{color:#86A3A0}
+.foot{display:grid;gap:28px}
+@media (min-width:900px){.foot{grid-template-columns:1.3fr 1fr 1fr}footer{padding-bottom:48px}}
+footer h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:10px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.legal{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12.5px;color:#86A3A0}
+.legal a{color:#FFD49A}
+
+/* whatsapp flutuante (mobile) */
+.fab{position:fixed;z-index:90;left:16px;right:16px;bottom:16px;display:flex;transition:transform .35s ease,opacity .35s ease}
+.fab.off{transform:translateY(120%);opacity:0;pointer-events:none}
+.fab .btn{width:100%;padding:17px 22px;box-shadow:0 18px 40px -12px rgba(14,52,51,.6)}
+@media (min-width:900px){.fab{display:none}}
+
+/* animação de entrada do hero */
+.rise{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}.d4{animation-delay:.32s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rise{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+.btn-sun{background:linear-gradient(120deg,#F59A6B,#E9707A);color:#fff;box-shadow:0 12px 30px -12px rgba(233,112,122,.7)}
+.btn-sun:hover{background:linear-gradient(120deg,#EE8C5C,#DF5F6B)}
+.btn-sun svg{width:20px;height:20px}
+.nav-ctas{display:none;gap:10px}
+@media (min-width:900px){.nav-ctas{display:flex}}
+.fab{gap:10px}.fab .btn-wa{flex:0 0 auto;width:auto}.fab .btn-sun{flex:1}
+/* profissionais */
+#profissionais{background:var(--ink);color:#E6EFEE;position:relative;overflow:hidden}
+#profissionais::after{content:"";position:absolute;left:-140px;bottom:-200px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,201,121,.35),rgba(233,112,122,0) 70%)}
+#profissionais .kicker{color:var(--sun1)}
+#profissionais h2{color:#fff}
+#profissionais h2 em{color:var(--sun1)}
+#profissionais .sec-lead{color:#A9C2BF}
+.pro{display:grid;gap:16px;margin-top:40px;position:relative;z-index:1}
+@media (min-width:900px){.pro{grid-template-columns:repeat(3,1fr)}}
+.pro div{border-radius:var(--r);padding:26px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+.pro h3{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.1;color:#fff;margin-bottom:8px}
+.pro p{font-size:15px;color:#A9C2BF}
+.pro-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:28px;position:relative;z-index:1}
+.pro-cta .btn-wa{background:#fff;color:var(--ink)}
+.pro-cta .src{color:#86A3A0;margin:0}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--sun2);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<div class="preview-bar" role="note">
+  <span>Prévia criada pela Corte &amp; Código para Clínica Lumiti Saúde · não é o site oficial ·</span>
+  <a href="https://wa.me/5521982778045?text=Oi%20Cristiano%2C%20vi%20a%20pr%C3%A9via%20do%20site%20da%20Cl%C3%ADnica%20Lumiti%20Sa%C3%BAde" target="_blank" rel="noopener">Falar com o Cristiano</a>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="star" viewBox="0 0 24 24"><path d="m12 2 2.9 6.26 6.85.7-5.13 4.6 1.46 6.74L12 16.9l-6.08 3.4 1.46-6.74L2.25 8.96l6.85-.7Z"/></symbol>
+</svg>
+
+<div class="above" id="inicio">
+  <div class="sun" aria-hidden="true">
+    <div class="glow"></div>
+    <svg viewBox="0 0 800 800" fill="none"><g stroke="#0E3433" stroke-opacity=".1"><circle cx="400" cy="400" r="250"/><circle cx="400" cy="400" r="305"/><circle cx="400" cy="400" r="360" stroke-dasharray="2 9"/><circle cx="400" cy="400" r="396" stroke-opacity=".06"/></g></svg>
+  </div>
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="#inicio" aria-label="Clínica Lumiti Saúde, início">
+      <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC979"/><stop offset=".55" stop-color="#F59A6B"/><stop offset="1" stop-color="#E9707A"/></linearGradient></defs><circle cx="20" cy="20" r="10" fill="url(#lg)"/><circle cx="20" cy="20" r="15" fill="none" stroke="#0E3433" stroke-opacity=".25"/><circle cx="20" cy="20" r="19.2" fill="none" stroke="#0E3433" stroke-opacity=".12"/></svg>
+      <span><b>Lumiti</b><small>Saúde · Barra</small></span>
+    </a>
+    <ul>
+      <li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#agendar">Como agendar</a></li>
+      <li><a href="#localizacao">Localização</a></li>
+      <li><a href="#profissionais">Para profissionais</a></li>
+    </ul>
+    <span class="nav-ctas"><a class="btn btn-sun btn-sm" href="https://www.doctoralia.com.br/z/LFpQnB" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h3"/></svg>Agendar online</a></span>
+  </div>
+</header>
+
+<section class="hero" style="padding-top:18px">
+  <div class="wrap">
+    <span class="eyebrow rise"><i></i>Clínica multiespecialidades<span class="hide-sm">&nbsp;· Barra da Tijuca</span></span>
+    <h1 class="rise d1">Cuidado completo, <em>em um só</em> endereço.</h1>
+    <p class="lead rise d2">Medicina e odontologia lado a lado no Shopping Open Mall Américas: de clínico geral e cardiologia a otorrinolaringologia, ortopedia e harmonização orofacial.</p>
+    <div class="cta rise d3" id="hero-cta">
+      <a class="btn btn-sun" href="https://www.doctoralia.com.br/z/LFpQnB" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h3"/></svg>Agendar online</a>
+      <a class="btn btn-wa" href="https://wa.me/5521994599722?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Lumiti." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+    </div>
+    <div class="proof rise d4">
+      <div class="proof-card">
+        <div class="num">5/5</div>
+        <p><span class="stars" aria-label="5 de 5 estrelas"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span><strong>2.507 opiniões</strong>no Doctoralia</p>
+      </div>
+      <div class="proof-card">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="13" height="12" rx="2.5"/><path d="m16 10 5-3v10l-5-3"/></svg></div>
+        <p><strong>Teleconsulta</strong>atendimento on-line disponível</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<main>
+<section id="especialidades">
+  <div class="wrap">
+    <span class="kicker">Especialidades</span>
+    <h2>Especialistas que <em>conversam</em> entre si.</h2>
+    <p class="sec-lead">Consultas médicas, cirurgia e odontologia no mesmo endereço, para resolver mais coisas numa mesma ida à clínica.</p>
+
+    <div class="groups">
+      <div class="group">
+        <div class="group-head">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11" r="2"/></svg></div>
+          <div><h3>Medicina</h3><p>Consultas e acompanhamento</p></div>
+        </div>
+        <ul class="chips">
+          <li>Clínico geral</li><li>Cardiologia</li><li>Endocrinologia e metabologia</li><li>Neurologia</li><li>Dermatologia</li><li>Ginecologia e obstetrícia</li><li>Mastologia</li><li>Oftalmologia</li><li>Ortopedia e traumatologia</li><li>Otorrinolaringologia</li><li>Clínica de dor</li>
+        </ul>
+      </div>
+      <div class="stack">
+        <div class="group">
+          <div class="group-head">
+            <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 0-5 2-5 4.5 0 2 .8 3 .8 5.5 0 3 .9 8 2.4 8 1.3 0 1.1-4.5 1.8-4.5s.5 4.5 1.8 4.5c1.5 0 2.4-5 2.4-8 0-2.5.8-3.5.8-5.5C17 5 15 3 12 3Z"/></svg></div>
+            <div><h3>Odontologia</h3><p>Do adulto à criança</p></div>
+          </div>
+          <ul class="chips"><li>Odontologia</li><li>Odontopediatria</li><li>Ortodontia</li><li>Harmonização orofacial</li></ul>
+        </div>
+        <div class="group">
+          <div class="group-head">
+            <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="8.5"/></svg></div>
+            <div><h3>Cirurgia</h3><p>Avaliação com especialista</p></div>
+          </div>
+          <ul class="chips"><li>Cirurgia geral</li><li>Cirurgia de cabeça e pescoço</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="exams">
+      <h3>Exames em otorrinolaringologia</h3>
+      <p>Entre os serviços da clínica estão exames endoscópicos de nariz, garganta e deglutição.</p>
+      <ul>
+        <li>Videolaringoscopia</li>
+        <li>Videolaringoestroboscopia</li>
+        <li>Videonasofaringoscopia</li>
+        <li>Nasofibroscopia</li>
+        <li>Videoendoscopia da deglutição</li>
+        <li>Vídeo-endoscopia naso-sinusal com endoscópio flexível</li>
+      </ul>
+      <p class="src">Fonte: perfil da Clínica Lumiti no Doctoralia. Confirme disponibilidade e preparo pelo WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<section id="diferenciais">
+  <div class="wrap">
+    <span class="kicker">Por que a Lumiti</span>
+    <h2>A confiança de <em>milhares</em> de pacientes.</h2>
+    <div class="facts">
+      <div class="fact">
+        <div class="big">5<small>/5</small></div>
+        <h3>2.507 opiniões no Doctoralia</h3>
+        <p>Avaliação média máxima, deixada por pacientes que passaram pela clínica.</p>
+        <p class="src">Fonte: Doctoralia, consultado em 03/11/2026.</p>
+      </div>
+      <div class="fact">
+        <div class="big">139</div>
+        <h3>serviços listados</h3>
+        <p>Consultas, exames e procedimentos de várias especialidades no mesmo lugar.</p>
+        <p class="src">Fonte: perfil no Doctoralia.</p>
+      </div>
+      <div class="fact">
+        <div class="big" aria-hidden="true"><svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#D9644F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="13" height="12" rx="2.5"/><path d="m16 10 5-3v10l-5-3"/></svg></div>
+        <h3>Teleconsulta</h3>
+        <p>A clínica também oferece atendimento on-line. Pergunte quais especialidades atendem nesse formato.</p>
+        <p class="src">Fonte: perfil no Doctoralia.</p>
+      </div>
+      <div class="fact">
+        <div class="big" aria-hidden="true"><svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#D9644F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+        <h3>No Open Mall Américas</h3>
+        <p>Na Av. das Américas, 7907, Barra da Tijuca. Bloco 1, loja 120.</p>
+        <p class="src">Convênios citados no Doctoralia: Unimed Ferj e reembolso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="agendar">
+  <div class="wrap">
+    <span class="kicker">Como agendar</span>
+    <h2>Marcar é <em>simples</em>.</h2>
+    <div class="steps">
+      <div class="step"><h3>Agende online ou chame no WhatsApp</h3><p>Escolha o horário na <a href="https://www.doctoralia.com.br/z/LFpQnB" target="_blank" rel="noopener">agenda online do Doctoralia</a>, a mesma que a clínica já usa, ou fale com a equipe pelo <a href="https://wa.me/5521994599722?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Lumiti." target="_blank" rel="noopener">(21) 99459-9722</a> ou ligue para <a href="tel:+552121967350">(21) 2196-7350</a>.</p></div>
+      <div class="step"><h3>Diga o que procura</h3><p>Informe a especialidade, se a consulta é presencial ou teleconsulta, e se vai usar convênio ou reembolso.</p></div>
+      <div class="step"><h3>Escolha o horário</h3><p>A equipe confirma dia, horário e qualquer preparo necessário para exames.</p></div>
+    </div>
+    <div class="cta-band">
+      <div><h3>Vamos marcar sua consulta?</h3><p>Agenda online pelo Doctoralia ou atendimento pelo WhatsApp da Clínica Lumiti Saúde.</p></div>
+      <div class="cta" style="margin-top:0"><a class="btn btn-sun" href="https://www.doctoralia.com.br/z/LFpQnB" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h3"/></svg>Agendar online</a><a class="btn btn-wa" href="https://wa.me/5521994599722?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Lumiti." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="localizacao">
+  <div class="wrap">
+    <span class="kicker">Localização</span>
+    <h2>Na Av. das <em>Américas</em>.</h2>
+    <div class="loc">
+      <div class="loc-card">
+        <dl>
+          <div><dt>Endereço</dt><dd>Av. das Américas, 7907, bloco 1, loja 120<br>Shopping Open Mall Américas<br>Barra da Tijuca, Rio de Janeiro – RJ<br>CEP 22793-081</dd></div>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5521994599722?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Lumiti." target="_blank" rel="noopener">(21) 99459-9722</a></dd></div>
+          <div><dt>Telefone</dt><dd><a href="tel:+552121967350">(21) 2196-7350</a></dd></div>
+        </dl>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Cl%C3%ADnica%20Lumiti%20Sa%C3%BAde%2C%20Av.%20das%20Am%C3%A9ricas%2C%207907%2C%20Bloco%201%2C%20Loja%20120%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022793-081" target="_blank" rel="noopener">Abrir no Google Maps →</a>
+      </div>
+      <a class="map-art" href="https://www.google.com/maps/search/?api=1&amp;query=Cl%C3%ADnica%20Lumiti%20Sa%C3%BAde%2C%20Av.%20das%20Am%C3%A9ricas%2C%207907%2C%20Bloco%201%2C%20Loja%20120%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022793-081" target="_blank" rel="noopener" aria-label="Abrir a localização no Google Maps">
+        <svg viewBox="0 0 600 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="600" height="380" fill="#EAF0EC"/>
+          <path d="M-20 300 C 120 260, 220 300, 340 250 S 560 200, 640 220 L 640 400 L -20 400Z" fill="#D6E6E3"/>
+          <g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"><path d="M-20 196 C 150 180, 420 190, 640 176"/></g>
+          <g stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9"><path d="M120 -10 L 150 400"/><path d="M420 -10 L 400 400"/><path d="M-10 90 C 200 110, 400 70, 620 96"/></g>
+          <g fill="#F4EDE3"><rect x="180" y="110" width="80" height="54" rx="10"/><rect x="300" y="100" width="86" height="64" rx="10"/><rect x="460" y="112" width="90" height="48" rx="10"/><rect x="190" y="218" width="160" height="44" rx="10"/><rect x="30" y="112" width="70" height="52" rx="10"/></g>
+          <text x="40" y="186" font-family="Manrope, sans-serif" font-size="12" font-weight="700" fill="#6F8482" letter-spacing="2">AV. DAS AMÉRICAS</text>
+        </svg>
+        <div class="pin"><span>Clínica Lumiti Saúde</span><i></i><b></b></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="profissionais">
+  <div class="wrap">
+    <span class="kicker">Para profissionais de saúde</span>
+    <h2>Alugue seu consultório <em>na Barra</em>.</h2>
+    <p class="sec-lead">Além de atender pacientes, a Lumiti oferece consultórios para locação num espaço multidisciplinar, com a proposta de cuidar da operação para que o profissional se concentre nos pacientes.</p>
+    <div class="pro">
+      <div><h3>Consultórios para locação</h3><p>Salas para profissionais de saúde dentro da clínica, na Av. das Américas.</p></div>
+      <div><h3>Espaço multidisciplinar</h3><p>Medicina e odontologia no mesmo endereço, ao lado de outras especialidades.</p></div>
+      <div><h3>Foco no paciente</h3><p>A clínica se propõe a cuidar dos bastidores enquanto você atende.</p></div>
+    </div>
+    <div class="pro-cta">
+      <a class="btn btn-wa" href="https://wa.me/5521994599722?text=Ol%C3%A1%21%20Sou%20profissional%20de%20sa%C3%BAde%20e%20quero%20conhecer%20as%20salas%20para%20loca%C3%A7%C3%A3o%20da%20Lumiti." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Quero conhecer as salas</a>
+      <p class="src">Fonte: bio do Instagram @lumitisaude e Linktree (“Locação de sala”). Valores, horários e estrutura: consulte pelo WhatsApp.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#inicio"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="10" fill="url(#lg)"/><circle cx="20" cy="20" r="15" fill="none" stroke="#fff" stroke-opacity=".25"/></svg><span><b>Lumiti</b><small>Saúde · Barra</small></span></a>
+        <p style="margin-top:14px;max-width:34ch">Clínica multiespecialidades na Barra da Tijuca, Rio de Janeiro.</p>
+      </div>
+      <div><h4>Contato</h4><p><a href="https://wa.me/5521994599722?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Lumiti." target="_blank" rel="noopener">WhatsApp (21) 99459-9722</a><br><a href="tel:+552121967350">Tel. (21) 2196-7350</a><br><a href="https://www.doctoralia.com.br/z/LFpQnB" target="_blank" rel="noopener">Agenda online (Doctoralia)</a></p></div>
+      <div><h4>Endereço</h4><p>Av. das Américas, 7907, bl. 1, loja 120<br>Open Mall Américas · Barra da Tijuca<br>Rio de Janeiro – RJ · 22793-081</p></div>
+    </div>
+    <div class="legal">
+      <span>Prévia · Corte &amp; Código · <a href="https://corteecodigo.vercel.app" target="_blank" rel="noopener">corteecodigo.vercel.app</a></span>
+      <span>Página de demonstração, não é o site oficial da Clínica Lumiti Saúde.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="fab off" id="fab"><a class="btn btn-sun" href="https://www.doctoralia.com.br/z/LFpQnB" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h3"/></svg>Agendar online</a><a class="btn btn-wa" href="https://wa.me/5521994599722?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Lumiti." target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a></div>
+
+<script>
+(function(){var f=document.getElementById('fab'),c=document.getElementById('hero-cta');
+if(!('IntersectionObserver' in window)){f.classList.remove('off');return}
+new IntersectionObserver(function(e){f.classList.toggle('off',e[0].isIntersecting)}).observe(c);})();
+</script>
+</body>
+</html>
